@@ -1,0 +1,75 @@
+{
+  "months": {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12
+  },
+  "money_units": [
+    ["crore", 10000000], ["cr", 10000000],
+    ["lakh", 100000], ["lac", 100000]
+  ],
+  "grades": {
+    "vocab": ["excellent", "very good", "good", "satisfactory"],
+    "patterns": [
+      { "name": "graded",   "regex": "graded\\s+(excellent|very good|good|satisfactory)", "flags": "i", "group": 1 },
+      { "name": "assessed", "regex": "assessed the completed work as (excellent|very good|good|satisfactory)", "flags": "i", "group": 1 },
+      { "name": "taken_over", "regex": "(?is)taken over on.{0,40}satisfactory", "value": "satisfactory" }
+    ]
+  },
+  "client_suffix_regex": "\\s*\\([^)]*\\)\\.?$",
+
+  "doc_types": {
+    "completion_certificate": {
+      "client_header_lines": 3,
+      "fields": [
+        { "field": "work",           "labels": ["Name of Work", "Project Name", "Name of the Work", "Work Executed", "Work"], "parse": "work_name" },
+        { "field": "category",       "labels": ["Nature / Category", "Nature of Work", "Work Category", "Nature", "Category"], "parse": "text" },
+        { "field": "value",          "labels": ["Contract Value (Original)", "Contract Value", "Gross Executed Value", "Executed Value", "Value"], "parse": "money" },
+        { "field": "completion_date", "labels": ["Completion Date", "Date of Completion", "Completion", "Completed"], "parse": "date" },
+        { "field": "pm",             "labels": ["Contractor's Project Manager", "Project Lead", "Project Manager", "Contractor's PM"], "parse": "text" }
+      ],
+      "prose": [
+        { "field": "value", "regex": "(?:gross executed value|contract value|executed value)\\s+(?:of\\s+)?((?:INR|Rs\\.?|₹)\\s*[\\d,]+(?:\\.\\d+)?(?:\\s*(?:Cr|Lakh|crore|lac))?)", "flags": "i", "group": 1, "post": "money" },
+        { "field": "completion_date", "regex": "completed\\s+(?:in\\s+all\\s+respects\\s+)?(?:on|by)\\s+([\\d/\\-]+|[\\w\\s]+?\\d{4})", "flags": "i", "group": 1, "post": "date" },
+        { "field": "pm", "regex": "supervised\\s+(?:on\\s+the\\s+contractor'?s\\s+side\\s+)?by\\s+([A-Z][a-zA-Z]+(?:\\s+[A-Z][a-zA-Z]+)+)", "flags": "i", "group": 1, "post": "text" }
+      ]
+    },
+    "company_completion_certificate": {
+      "client_header_lines": 0,
+      "fields": [
+        { "field": "work",           "labels": ["Name of Work", "Project Name", "Name of the Work", "Work Executed", "Work"], "parse": "work_name" },
+        { "field": "client",         "labels": ["Client", "Employer", "Client / Employer"], "parse": "text" },
+        { "field": "category",       "labels": ["Category", "Work Category", "Nature / Category", "Nature of Work"], "parse": "text" },
+        { "field": "value",          "labels": ["Executed Value", "Contract Value", "Value", "Gross Executed Value"], "parse": "money" },
+        { "field": "completion_date", "labels": ["Completion", "Completion Date", "Date of Completion", "Completed"], "parse": "date" },
+        { "field": "pm",             "labels": ["Project Lead", "Project Manager", "Contractor's Project Manager"], "parse": "text" }
+      ],
+      "prose": []
+    },
+    "reference_letter": {
+      "client_header_lines": 2,
+      "fields": [
+        { "field": "work",           "labels": ["Name of Work", "Project Name", "Name of the Work", "Work Executed", "Work"], "parse": "work_name" },
+        { "field": "category",       "labels": ["Nature of Work", "Nature / Category", "Type of Work", "Work Category", "Category", "Scope of Work"], "parse": "text" },
+        { "field": "value",          "labels": ["Contract Value", "Value", "Executed Value"], "parse": "money" },
+        { "field": "completion_date", "labels": ["Date of Completion", "Completion Date", "Completed"], "parse": "date" },
+        { "field": "role",           "labels": ["Contractor's Role", "Role of Contractor"], "parse": "role" }
+      ],
+      "prose": []
+    }
+  },
+
+  "personnel": {
+    "certify_regex": "This is to certify that\\s*\\n\\s*([^\\n]+)",
+    "confer_regex": "This credential is conferred upon\\s*\\n\\s*([^\\n]+)",
+    "cred_type_labels": ["Credential Type", "Certification"],
+    "cred_id_regex": "(?i)Credential ID[:\\s]*\\n?\\s*([A-Z0-9-]+)"
+  },
+  "cv": {
+    "name_regex": "(?im)^\\s*Name\\s*\\n\\s*([^\\n]+)"
+  },
+
+  "financial": {
+    "column_vocab": ["amount", "rate", "quantity", "qty measured", "debit", "credit", "balance", "value", "cost", "invoiced", "received", "outstanding"],
+    "client_columns": ["invoiced", "received", "outstanding", "amount", "balance"]
+  }
+}

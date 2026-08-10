@@ -1,0 +1,2963 @@
+{
+ "fingerprint": "15b1a776e4b18f80",
+ "kg": {
+  "works": {
+   "rcc bridge \u2014 gujarat pkg-1": {
+    "work": "RCC Bridge \u2014 Gujarat Pkg-1",
+    "client": "National Special Projects Office",
+    "category": "Bridges Flyovers",
+    "value": 333800000,
+    "completion_date": [
+     2011,
+     2,
+     6
+    ],
+    "pm": "Suresh Desai",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "1",
+    "state": "Gujarat"
+   },
+   "wtp augmentation \u2014 uttar pradesh pkg-2": {
+    "work": "WTP Augmentation \u2014 Uttar Pradesh Pkg-2",
+    "client": "Mega Infrastructure Authority",
+    "category": "Water Treatment",
+    "value": 248500000,
+    "completion_date": [
+     2013,
+     1,
+     11
+    ],
+    "pm": "Meera Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "2",
+    "state": "Uttar Pradesh"
+   },
+   "stp \u2014 gujarat pkg-3": {
+    "work": "STP \u2014 Gujarat Pkg-3",
+    "client": "Public Works Department, Govt of Gujarat",
+    "category": "Sewerage Drainage",
+    "value": 209200000,
+    "completion_date": [
+     2016,
+     4,
+     11
+    ],
+    "pm": "Farhan Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "3",
+    "state": "Gujarat"
+   },
+   "residential quarters \u2014 odisha pkg-4": {
+    "work": "Residential Quarters \u2014 Odisha Pkg-4",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Buildings",
+    "value": 112300000,
+    "completion_date": [
+     2023,
+     5,
+     17
+    ],
+    "pm": "Suresh Desai",
+    "grade": "good",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "4",
+    "state": "Odisha"
+   },
+   "substation epc \u2014 madhya pradesh pkg-5": {
+    "work": "Substation EPC \u2014 Madhya Pradesh Pkg-5",
+    "client": "Suvarna Projects Limited",
+    "category": "Industrial Epc",
+    "value": 244100000,
+    "completion_date": [
+     2012,
+     4,
+     26
+    ],
+    "pm": "Meera Banerjee",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "5",
+    "state": "Madhya Pradesh"
+   },
+   "lift irrigation \u2014 odisha pkg-6": {
+    "work": "Lift Irrigation \u2014 Odisha Pkg-6",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Irrigation",
+    "value": 243100000,
+    "completion_date": [
+     2020,
+     2,
+     7
+    ],
+    "pm": "Jaya Desai",
+    "pkg": "6",
+    "state": "Odisha"
+   },
+   "rigid pavement \u2014 madhya pradesh pkg-7": {
+    "work": "Rigid Pavement \u2014 Madhya Pradesh Pkg-7",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Roads Highways",
+    "value": 375200000,
+    "completion_date": [
+     2020,
+     5,
+     9
+    ],
+    "pm": "Amit Iyer",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "7",
+    "state": "Madhya Pradesh"
+   },
+   "flyover \u2014 gujarat pkg-8": {
+    "work": "Flyover \u2014 Gujarat Pkg-8",
+    "client": "Meridian Constructors & Co",
+    "category": "Bridges Flyovers",
+    "value": 170800000,
+    "completion_date": [
+     2010,
+     11,
+     17
+    ],
+    "pm": "Kavita Reddy",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "8",
+    "state": "Gujarat"
+   },
+   "wtp augmentation \u2014 tamil nadu pkg-9": {
+    "work": "WTP Augmentation \u2014 Tamil Nadu Pkg-9",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Water Treatment",
+    "value": 113200000,
+    "completion_date": [
+     2024,
+     4,
+     17
+    ],
+    "pm": "Meera Chatterjee",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "9",
+    "state": "Tamil Nadu"
+   },
+   "sewerage network \u2014 rajasthan pkg-10": {
+    "work": "Sewerage Network \u2014 Rajasthan Pkg-10",
+    "client": "Irrigation & Waterways Dept, Govt of Rajasthan",
+    "category": "Sewerage Drainage",
+    "value": 234800000,
+    "completion_date": [
+     2011,
+     5,
+     3
+    ],
+    "pm": "Sanjay Joshi",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "10",
+    "state": "Rajasthan"
+   },
+   "institutional building \u2014 uttar pradesh pkg-11": {
+    "work": "Institutional Building \u2014 Uttar Pradesh Pkg-11",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Buildings",
+    "value": 240500000,
+    "completion_date": [
+     2024,
+     10,
+     8
+    ],
+    "pm": "Amit Mukherjee",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "11",
+    "state": "Uttar Pradesh"
+   },
+   "material handling plant \u2014 jharkhand pkg-12": {
+    "work": "Material Handling Plant \u2014 Jharkhand Pkg-12",
+    "client": "Jal Nigam, Jharkhand",
+    "category": "Industrial Epc",
+    "value": 730200000,
+    "completion_date": [
+     2020,
+     7,
+     27
+    ],
+    "pm": "Imran Joshi",
+    "referenced": true,
+    "pkg": "12",
+    "state": "Jharkhand"
+   },
+   "lift irrigation \u2014 west bengal pkg-13": {
+    "work": "Lift Irrigation \u2014 West Bengal Pkg-13",
+    "client": "Suvarna Projects Limited",
+    "category": "Irrigation",
+    "value": 232000000,
+    "completion_date": [
+     2021,
+     6,
+     4
+    ],
+    "pm": "Divya Singh",
+    "referenced": true,
+    "pkg": "13",
+    "state": "West Bengal"
+   },
+   "road widening \u2014 west bengal pkg-14": {
+    "work": "Road Widening \u2014 West Bengal Pkg-14",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Roads Highways",
+    "value": 101100000,
+    "completion_date": [
+     2024,
+     9,
+     30
+    ],
+    "pm": "Meera Banerjee",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "14",
+    "state": "West Bengal"
+   },
+   "flyover \u2014 delhi pkg-15": {
+    "work": "Flyover \u2014 Delhi Pkg-15",
+    "client": "Suvarna Projects Limited",
+    "category": "Bridges Flyovers",
+    "value": 90800000,
+    "completion_date": [
+     2023,
+     3,
+     2
+    ],
+    "pm": "Sunita Joshi",
+    "pkg": "15",
+    "state": "Delhi"
+   },
+   "pumping station \u2014 tamil nadu pkg-16": {
+    "work": "Pumping Station \u2014 Tamil Nadu Pkg-16",
+    "client": "Tamil Nadu Municipal Corporation",
+    "category": "Water Treatment",
+    "value": 268000000,
+    "completion_date": [
+     2013,
+     3,
+     2
+    ],
+    "pm": "Meera Banerjee",
+    "pkg": "16",
+    "state": "Tamil Nadu"
+   },
+   "sewerage network \u2014 odisha pkg-17": {
+    "work": "Sewerage Network \u2014 Odisha Pkg-17",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Sewerage Drainage",
+    "value": 385400000,
+    "completion_date": [
+     2024,
+     3,
+     27
+    ],
+    "pm": "Meera Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "17",
+    "state": "Odisha"
+   },
+   "hospital block \u2014 west bengal pkg-18": {
+    "work": "Hospital Block \u2014 West Bengal Pkg-18",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Buildings",
+    "value": 98000000,
+    "completion_date": [
+     2013,
+     3,
+     22
+    ],
+    "pm": "Deepa Chatterjee",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "18",
+    "state": "West Bengal"
+   },
+   "substation epc \u2014 tamil nadu pkg-19": {
+    "work": "Substation EPC \u2014 Tamil Nadu Pkg-19",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Industrial Epc",
+    "value": 153900000,
+    "completion_date": [
+     2014,
+     8,
+     13
+    ],
+    "pm": "Suresh Chopra",
+    "grade": "satisfactory",
+    "pkg": "19",
+    "state": "Tamil Nadu"
+   },
+   "lift irrigation \u2014 madhya pradesh pkg-20": {
+    "work": "Lift Irrigation \u2014 Madhya Pradesh Pkg-20",
+    "client": "National Expressway Development Authority",
+    "category": "Irrigation",
+    "value": 239200000,
+    "completion_date": [
+     2013,
+     7,
+     7
+    ],
+    "pm": "Priya Patel",
+    "grade": "good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "20",
+    "state": "Madhya Pradesh"
+   },
+   "road widening \u2014 maharashtra pkg-21": {
+    "work": "Road Widening \u2014 Maharashtra Pkg-21",
+    "client": "Public Works Department, Govt of Maharashtra",
+    "category": "Roads Highways",
+    "value": 193299999,
+    "completion_date": [
+     2011,
+     4,
+     22
+    ],
+    "pm": "Neha Chopra",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "21",
+    "state": "Maharashtra"
+   },
+   "rcc bridge \u2014 jharkhand pkg-22": {
+    "work": "RCC Bridge \u2014 Jharkhand Pkg-22",
+    "client": "Jharkhand Municipal Corporation",
+    "category": "Bridges Flyovers",
+    "value": 87400000,
+    "completion_date": [
+     2013,
+     6,
+     1
+    ],
+    "pm": "Farhan Roy",
+    "grade": "excellent",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "22",
+    "state": "Jharkhand"
+   },
+   "water treatment plant \u2014 madhya pradesh pkg-23": {
+    "work": "Water Treatment Plant \u2014 Madhya Pradesh Pkg-23",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Water Treatment",
+    "value": 349200000,
+    "completion_date": [
+     2022,
+     8,
+     28
+    ],
+    "pm": "Pooja Bose",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "23",
+    "state": "Madhya Pradesh"
+   },
+   "stormwater drainage \u2014 madhya pradesh pkg-24": {
+    "work": "Stormwater Drainage \u2014 Madhya Pradesh Pkg-24",
+    "client": "Meridian Constructors & Co",
+    "category": "Sewerage Drainage",
+    "value": 191900000,
+    "completion_date": [
+     2018,
+     4,
+     13
+    ],
+    "pm": "Deepa Chatterjee",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "24",
+    "state": "Madhya Pradesh"
+   },
+   "residential quarters \u2014 uttar pradesh pkg-25": {
+    "work": "Residential Quarters \u2014 Uttar Pradesh Pkg-25",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Buildings",
+    "value": 417100000,
+    "completion_date": [
+     2021,
+     6,
+     5
+    ],
+    "pm": "Sunita Joshi",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "25",
+    "state": "Uttar Pradesh"
+   },
+   "material handling plant \u2014 uttar pradesh pkg-26": {
+    "work": "Material Handling Plant \u2014 Uttar Pradesh Pkg-26",
+    "client": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
+    "category": "Industrial Epc",
+    "value": 123300000,
+    "completion_date": [
+     2025,
+     7,
+     16
+    ],
+    "pm": "Farhan Rao",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "26",
+    "state": "Uttar Pradesh"
+   },
+   "check dam \u2014 rajasthan pkg-27": {
+    "work": "Check Dam \u2014 Rajasthan Pkg-27",
+    "client": "Irrigation & Waterways Dept, Govt of Rajasthan",
+    "category": "Irrigation",
+    "value": 195200000,
+    "completion_date": [
+     2023,
+     9,
+     7
+    ],
+    "pm": "Meera Banerjee",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "27",
+    "state": "Rajasthan"
+   },
+   "rigid pavement \u2014 delhi pkg-28": {
+    "work": "Rigid Pavement \u2014 Delhi Pkg-28",
+    "client": "Suvarna Projects Limited",
+    "category": "Roads Highways",
+    "value": 130200000,
+    "completion_date": [
+     2019,
+     5,
+     19
+    ],
+    "pm": "Sunita Joshi",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "28",
+    "state": "Delhi"
+   },
+   "rob \u2014 jharkhand pkg-29": {
+    "work": "ROB \u2014 Jharkhand Pkg-29",
+    "client": "Arunodaya Infrastructure",
+    "category": "Bridges Flyovers",
+    "value": 223800000,
+    "completion_date": [
+     2023,
+     7,
+     12
+    ],
+    "pm": "Meera Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "29",
+    "state": "Jharkhand"
+   },
+   "wtp augmentation \u2014 west bengal pkg-30": {
+    "work": "WTP Augmentation \u2014 West Bengal Pkg-30",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Water Treatment",
+    "value": 182600000,
+    "completion_date": [
+     2021,
+     6,
+     28
+    ],
+    "pm": "Neha Chopra",
+    "referenced": true,
+    "pkg": "30",
+    "state": "West Bengal"
+   },
+   "stp \u2014 uttar pradesh pkg-31": {
+    "work": "STP \u2014 Uttar Pradesh Pkg-31",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Sewerage Drainage",
+    "value": 721000000,
+    "completion_date": [
+     2024,
+     11,
+     8
+    ],
+    "pm": "Naveen Roy",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "31",
+    "state": "Uttar Pradesh"
+   },
+   "institutional building \u2014 gujarat pkg-32": {
+    "work": "Institutional Building \u2014 Gujarat Pkg-32",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Buildings",
+    "value": 145700000,
+    "completion_date": [
+     2023,
+     12,
+     7
+    ],
+    "pm": "Deepa Chatterjee",
+    "grade": "satisfactory",
+    "pkg": "32",
+    "state": "Gujarat"
+   },
+   "process piping package \u2014 gujarat pkg-33": {
+    "work": "Process Piping Package \u2014 Gujarat Pkg-33",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Industrial Epc",
+    "value": 210400000,
+    "completion_date": [
+     2017,
+     9,
+     2
+    ],
+    "pm": "Chandan Banerjee",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "33",
+    "state": "Gujarat"
+   },
+   "canal lining \u2014 delhi pkg-34": {
+    "work": "Canal Lining \u2014 Delhi Pkg-34",
+    "client": "National Special Projects Office",
+    "category": "Irrigation",
+    "value": 413500000,
+    "completion_date": [
+     2010,
+     8,
+     20
+    ],
+    "pm": "Priti Pillai",
+    "referenced": true,
+    "pkg": "34",
+    "state": "Delhi"
+   },
+   "bituminous overlay \u2014 odisha pkg-35": {
+    "work": "Bituminous Overlay \u2014 Odisha Pkg-35",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Roads Highways",
+    "value": 27700000,
+    "completion_date": [
+     2025,
+     10,
+     15
+    ],
+    "pm": "Neha Chopra",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "35",
+    "state": "Odisha"
+   },
+   "rob \u2014 delhi pkg-36": {
+    "work": "ROB \u2014 Delhi Pkg-36",
+    "client": "Arunodaya Infrastructure",
+    "category": "Bridges Flyovers",
+    "value": 366300000,
+    "completion_date": [
+     2016,
+     5,
+     11
+    ],
+    "pm": "Neha Chopra",
+    "grade": "satisfactory",
+    "pkg": "36",
+    "state": "Delhi"
+   },
+   "wtp augmentation \u2014 delhi pkg-37": {
+    "work": "WTP Augmentation \u2014 Delhi Pkg-37",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Water Treatment",
+    "value": 67500000,
+    "completion_date": [
+     2020,
+     8,
+     27
+    ],
+    "pm": "Sanjay Joshi",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "37",
+    "state": "Delhi"
+   },
+   "stp \u2014 jharkhand pkg-38": {
+    "work": "STP \u2014 Jharkhand Pkg-38",
+    "client": "Central Works & Buildings Bureau",
+    "category": "Sewerage Drainage",
+    "value": 321400000,
+    "completion_date": [
+     2013,
+     9,
+     7
+    ],
+    "pm": "Asha Nair",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "38",
+    "state": "Jharkhand"
+   },
+   "hospital block \u2014 odisha pkg-39": {
+    "work": "Hospital Block \u2014 Odisha Pkg-39",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Buildings",
+    "value": 181700000,
+    "completion_date": [
+     2014,
+     12,
+     5
+    ],
+    "pm": "Meera Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "39",
+    "state": "Odisha"
+   },
+   "process piping package \u2014 uttar pradesh pkg-40": {
+    "work": "Process Piping Package \u2014 Uttar Pradesh Pkg-40",
+    "client": "National Expressway Development Authority",
+    "category": "Industrial Epc",
+    "value": 101300000,
+    "completion_date": [
+     2014,
+     7,
+     17
+    ],
+    "pm": "Suresh Chopra",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "40",
+    "state": "Uttar Pradesh"
+   },
+   "lift irrigation \u2014 rajasthan pkg-41": {
+    "work": "Lift Irrigation \u2014 Rajasthan Pkg-41",
+    "client": "Irrigation & Waterways Dept, Govt of Rajasthan",
+    "category": "Irrigation",
+    "value": 310700000,
+    "completion_date": [
+     2021,
+     7,
+     26
+    ],
+    "pm": "Suresh Das",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "41",
+    "state": "Rajasthan"
+   },
+   "road widening \u2014 madhya pradesh pkg-42": {
+    "work": "Road Widening \u2014 Madhya Pradesh Pkg-42",
+    "client": "Meridian Constructors & Co",
+    "category": "Roads Highways",
+    "value": 182600000,
+    "completion_date": [
+     2022,
+     5,
+     22
+    ],
+    "pm": "Lakshmi Ghosh",
+    "grade": "good",
+    "pkg": "42",
+    "state": "Madhya Pradesh"
+   },
+   "flyover \u2014 uttar pradesh pkg-43": {
+    "work": "Flyover \u2014 Uttar Pradesh Pkg-43",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Bridges Flyovers",
+    "value": 140300000,
+    "completion_date": [
+     2019,
+     3,
+     30
+    ],
+    "pm": "Priti Pillai",
+    "grade": "very good",
+    "pkg": "43",
+    "state": "Uttar Pradesh"
+   },
+   "water treatment plant \u2014 west bengal pkg-44": {
+    "work": "Water Treatment Plant \u2014 West Bengal Pkg-44",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Water Treatment",
+    "value": 178300000,
+    "completion_date": [
+     2016,
+     4,
+     16
+    ],
+    "pm": "Pooja Sen",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "44",
+    "state": "West Bengal"
+   },
+   "stp \u2014 odisha pkg-45": {
+    "work": "STP \u2014 Odisha Pkg-45",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Sewerage Drainage",
+    "value": 182800000,
+    "completion_date": [
+     2020,
+     7,
+     13
+    ],
+    "pm": "Naveen Roy",
+    "grade": "excellent",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "45",
+    "state": "Odisha"
+   },
+   "hospital block \u2014 west bengal pkg-46": {
+    "work": "Hospital Block \u2014 West Bengal Pkg-46",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Buildings",
+    "value": 318900000,
+    "completion_date": [
+     2016,
+     2,
+     3
+    ],
+    "pm": "Pooja Bose",
+    "grade": "excellent",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "46",
+    "state": "West Bengal"
+   },
+   "material handling plant \u2014 uttar pradesh pkg-47": {
+    "work": "Material Handling Plant \u2014 Uttar Pradesh Pkg-47",
+    "client": "National Expressway Development Authority",
+    "category": "Industrial Epc",
+    "value": 129400000,
+    "completion_date": [
+     2013,
+     9,
+     20
+    ],
+    "pm": "Rajesh Rao",
+    "referenced": true,
+    "pkg": "47",
+    "state": "Uttar Pradesh"
+   },
+   "canal lining \u2014 uttar pradesh pkg-48": {
+    "work": "Canal Lining \u2014 Uttar Pradesh Pkg-48",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Irrigation",
+    "value": 135600000,
+    "completion_date": [
+     2010,
+     7,
+     29
+    ],
+    "pm": "Gautam Joshi",
+    "grade": "satisfactory",
+    "pkg": "48",
+    "state": "Uttar Pradesh"
+   },
+   "rigid pavement \u2014 madhya pradesh pkg-49": {
+    "work": "Rigid Pavement \u2014 Madhya Pradesh Pkg-49",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Roads Highways",
+    "value": 298700000,
+    "completion_date": [
+     2025,
+     2,
+     26
+    ],
+    "pm": "Rahul Das",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "49",
+    "state": "Madhya Pradesh"
+   },
+   "rcc bridge \u2014 maharashtra pkg-50": {
+    "work": "RCC Bridge \u2014 Maharashtra Pkg-50",
+    "client": "Maharashtra Municipal Corporation",
+    "category": "Bridges Flyovers",
+    "value": 573700000,
+    "completion_date": [
+     2021,
+     2,
+     28
+    ],
+    "pm": "Rajesh Rao",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "50",
+    "state": "Maharashtra"
+   },
+   "wtp augmentation \u2014 west bengal pkg-51": {
+    "work": "WTP Augmentation \u2014 West Bengal Pkg-51",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Water Treatment",
+    "value": 149200000,
+    "completion_date": [
+     2022,
+     12,
+     16
+    ],
+    "pm": "Chandan Banerjee",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "51",
+    "state": "West Bengal"
+   },
+   "stormwater drainage \u2014 tamil nadu pkg-52": {
+    "work": "Stormwater Drainage \u2014 Tamil Nadu Pkg-52",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Sewerage Drainage",
+    "value": 155200000,
+    "completion_date": [
+     2015,
+     2,
+     10
+    ],
+    "pm": "Manoj Verma",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "52",
+    "state": "Tamil Nadu"
+   },
+   "hospital block \u2014 rajasthan pkg-53": {
+    "work": "Hospital Block \u2014 Rajasthan Pkg-53",
+    "client": "Central Works & Buildings Bureau",
+    "category": "Buildings",
+    "value": 90300000,
+    "completion_date": [
+     2015,
+     7,
+     28
+    ],
+    "pm": "Kavita Reddy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "53",
+    "state": "Rajasthan"
+   },
+   "process piping package \u2014 tamil nadu pkg-54": {
+    "work": "Process Piping Package \u2014 Tamil Nadu Pkg-54",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Industrial Epc",
+    "value": 270500000,
+    "completion_date": [
+     2015,
+     6,
+     6
+    ],
+    "pm": "Pooja Bose",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "54",
+    "state": "Tamil Nadu"
+   },
+   "check dam \u2014 delhi pkg-55": {
+    "work": "Check Dam \u2014 Delhi Pkg-55",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Irrigation",
+    "value": 121300000,
+    "completion_date": [
+     2017,
+     6,
+     23
+    ],
+    "pm": "Tanvir Malhotra",
+    "grade": "excellent",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "55",
+    "state": "Delhi"
+   },
+   "rigid pavement \u2014 jharkhand pkg-56": {
+    "work": "Rigid Pavement \u2014 Jharkhand Pkg-56",
+    "client": "National Expressway Development Authority",
+    "category": "Roads Highways",
+    "value": 211500000,
+    "completion_date": [
+     2017,
+     3,
+     6
+    ],
+    "pm": "Meera Chatterjee",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "56",
+    "state": "Jharkhand"
+   },
+   "box culvert chain \u2014 madhya pradesh pkg-57": {
+    "work": "Box Culvert Chain \u2014 Madhya Pradesh Pkg-57",
+    "client": "Meridian Constructors & Co",
+    "category": "Bridges Flyovers",
+    "value": 72900000,
+    "completion_date": [
+     2020,
+     10,
+     21
+    ],
+    "pm": "Rohit Singh",
+    "grade": "good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "57",
+    "state": "Madhya Pradesh"
+   },
+   "water treatment plant \u2014 rajasthan pkg-58": {
+    "work": "Water Treatment Plant \u2014 Rajasthan Pkg-58",
+    "client": "Irrigation & Waterways Dept, Govt of Rajasthan",
+    "category": "Water Treatment",
+    "value": 263900000,
+    "completion_date": [
+     2013,
+     9,
+     27
+    ],
+    "pm": "Tanvir Menon",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "58",
+    "state": "Rajasthan"
+   },
+   "stormwater drainage \u2014 odisha pkg-59": {
+    "work": "Stormwater Drainage \u2014 Odisha Pkg-59",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Sewerage Drainage",
+    "value": 225800000,
+    "completion_date": [
+     2023,
+     2,
+     18
+    ],
+    "pm": "Jaya Desai",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "59",
+    "state": "Odisha"
+   },
+   "hospital block \u2014 west bengal pkg-60": {
+    "work": "Hospital Block \u2014 West Bengal Pkg-60",
+    "client": "Irrigation & Waterways Dept, Govt of West Bengal",
+    "category": "Buildings",
+    "value": 403700000,
+    "completion_date": [
+     2024,
+     9,
+     7
+    ],
+    "pm": "Priti Pillai",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "60",
+    "state": "West Bengal"
+   },
+   "material handling plant \u2014 jharkhand pkg-61": {
+    "work": "Material Handling Plant \u2014 Jharkhand Pkg-61",
+    "client": "National Expressway Development Authority",
+    "category": "Industrial Epc",
+    "value": 449000000,
+    "completion_date": [
+     2021,
+     7,
+     31
+    ],
+    "pm": "Gautam Joshi",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "61",
+    "state": "Jharkhand"
+   },
+   "check dam \u2014 gujarat pkg-62": {
+    "work": "Check Dam \u2014 Gujarat Pkg-62",
+    "client": "Public Works Department, Govt of Gujarat",
+    "category": "Irrigation",
+    "value": 467300000,
+    "completion_date": [
+     2013,
+     3,
+     20
+    ],
+    "pm": "Naveen Roy",
+    "referenced": true,
+    "pkg": "62",
+    "state": "Gujarat"
+   },
+   "bituminous overlay \u2014 odisha pkg-63": {
+    "work": "Bituminous Overlay \u2014 Odisha Pkg-63",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Roads Highways",
+    "value": 184400000,
+    "completion_date": [
+     2020,
+     10,
+     29
+    ],
+    "pm": "Meera Banerjee",
+    "grade": "satisfactory",
+    "pkg": "63",
+    "state": "Odisha"
+   },
+   "rcc bridge \u2014 tamil nadu pkg-64": {
+    "work": "RCC Bridge \u2014 Tamil Nadu Pkg-64",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Bridges Flyovers",
+    "value": 680900000,
+    "completion_date": [
+     2017,
+     1,
+     26
+    ],
+    "pm": "Rahul Das",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "64",
+    "state": "Tamil Nadu"
+   },
+   "pumping station \u2014 uttar pradesh pkg-65": {
+    "work": "Pumping Station \u2014 Uttar Pradesh Pkg-65",
+    "client": "Jal Nigam, Uttar Pradesh",
+    "category": "Water Treatment",
+    "value": 284100000,
+    "completion_date": [
+     2018,
+     11,
+     15
+    ],
+    "pm": "Meera Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "65",
+    "state": "Uttar Pradesh"
+   },
+   "stp \u2014 gujarat pkg-66": {
+    "work": "STP \u2014 Gujarat Pkg-66",
+    "client": "Public Health Engineering Dept, Gujarat",
+    "category": "Sewerage Drainage",
+    "value": 134000000,
+    "completion_date": [
+     2017,
+     7,
+     4
+    ],
+    "pm": "Jaya Desai",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "66",
+    "state": "Gujarat"
+   },
+   "residential quarters \u2014 west bengal pkg-67": {
+    "work": "Residential Quarters \u2014 West Bengal Pkg-67",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Buildings",
+    "value": 161700000,
+    "completion_date": [
+     2016,
+     2,
+     8
+    ],
+    "pm": "Neha Chopra",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "67",
+    "state": "West Bengal"
+   },
+   "material handling plant \u2014 madhya pradesh pkg-68": {
+    "work": "Material Handling Plant \u2014 Madhya Pradesh Pkg-68",
+    "client": "Mega Infrastructure Authority",
+    "category": "Industrial Epc",
+    "value": 434200000,
+    "completion_date": [
+     2013,
+     1,
+     8
+    ],
+    "pm": "Priti Pillai",
+    "referenced": true,
+    "pkg": "68",
+    "state": "Madhya Pradesh"
+   },
+   "check dam \u2014 maharashtra pkg-69": {
+    "work": "Check Dam \u2014 Maharashtra Pkg-69",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Irrigation",
+    "value": 491100000,
+    "completion_date": [
+     2021,
+     1,
+     26
+    ],
+    "pm": "Rohit Singh",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "69",
+    "state": "Maharashtra"
+   },
+   "rigid pavement \u2014 tamil nadu pkg-70": {
+    "work": "Rigid Pavement \u2014 Tamil Nadu Pkg-70",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Roads Highways",
+    "value": 682400000,
+    "completion_date": [
+     2011,
+     2,
+     4
+    ],
+    "pm": "Meera Banerjee",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "70",
+    "state": "Tamil Nadu"
+   },
+   "rob \u2014 gujarat pkg-71": {
+    "work": "ROB \u2014 Gujarat Pkg-71",
+    "client": "Jal Nigam, Gujarat",
+    "category": "Bridges Flyovers",
+    "value": 388100000,
+    "completion_date": [
+     2025,
+     2,
+     20
+    ],
+    "pm": "Rohit Singh",
+    "grade": "very good",
+    "pkg": "71",
+    "state": "Gujarat"
+   },
+   "wtp augmentation \u2014 jharkhand pkg-72": {
+    "work": "WTP Augmentation \u2014 Jharkhand Pkg-72",
+    "client": "Jharkhand Municipal Corporation",
+    "category": "Water Treatment",
+    "value": 314600000,
+    "completion_date": [
+     2010,
+     12,
+     11
+    ],
+    "pm": "Suresh Desai",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "72",
+    "state": "Jharkhand"
+   },
+   "stp \u2014 west bengal pkg-73": {
+    "work": "STP \u2014 West Bengal Pkg-73",
+    "client": "Suvarna Projects Limited",
+    "category": "Sewerage Drainage",
+    "value": 219900000,
+    "completion_date": [
+     2012,
+     6,
+     11
+    ],
+    "pm": "Sanjay Joshi",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "73",
+    "state": "West Bengal"
+   },
+   "institutional building \u2014 west bengal pkg-74": {
+    "work": "Institutional Building \u2014 West Bengal Pkg-74",
+    "client": "Mega Infrastructure Authority",
+    "category": "Buildings",
+    "value": 128000000,
+    "completion_date": [
+     2018,
+     8,
+     11
+    ],
+    "pm": "Rahul Das",
+    "grade": "very good",
+    "pkg": "74",
+    "state": "West Bengal"
+   },
+   "process piping package \u2014 delhi pkg-75": {
+    "work": "Process Piping Package \u2014 Delhi Pkg-75",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Industrial Epc",
+    "value": 413400000,
+    "completion_date": [
+     2023,
+     11,
+     9
+    ],
+    "pm": "Kavita Reddy",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "75",
+    "state": "Delhi"
+   },
+   "check dam \u2014 delhi pkg-76": {
+    "work": "Check Dam \u2014 Delhi Pkg-76",
+    "client": "Suvarna Projects Limited",
+    "category": "Irrigation",
+    "value": 370400000,
+    "completion_date": [
+     2017,
+     10,
+     23
+    ],
+    "pm": "Sunita Joshi",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "76",
+    "state": "Delhi"
+   },
+   "highway construction \u2014 rajasthan pkg-77": {
+    "work": "Highway Construction \u2014 Rajasthan Pkg-77",
+    "client": "Arunodaya Infrastructure",
+    "category": "Roads Highways",
+    "value": 399000000,
+    "completion_date": [
+     2013,
+     10,
+     23
+    ],
+    "pm": "Farhan Khan",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "77",
+    "state": "Rajasthan"
+   },
+   "flyover \u2014 jharkhand pkg-78": {
+    "work": "Flyover \u2014 Jharkhand Pkg-78",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Bridges Flyovers",
+    "value": 98000000,
+    "completion_date": [
+     2019,
+     6,
+     9
+    ],
+    "pm": "Tanvir Malhotra",
+    "referenced": true,
+    "pkg": "78",
+    "state": "Jharkhand"
+   },
+   "pumping station \u2014 odisha pkg-79": {
+    "work": "Pumping Station \u2014 Odisha Pkg-79",
+    "client": "Central Works & Buildings Bureau",
+    "category": "Water Treatment",
+    "value": 358600000,
+    "completion_date": [
+     2018,
+     6,
+     30
+    ],
+    "pm": "Uma Sen",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "79",
+    "state": "Odisha"
+   },
+   "stormwater drainage \u2014 gujarat pkg-80": {
+    "work": "Stormwater Drainage \u2014 Gujarat Pkg-80",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Sewerage Drainage",
+    "value": 283800000,
+    "completion_date": [
+     2013,
+     3,
+     12
+    ],
+    "pm": "Farhan Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "80",
+    "state": "Gujarat"
+   },
+   "institutional building \u2014 delhi pkg-81": {
+    "work": "Institutional Building \u2014 Delhi Pkg-81",
+    "client": "National Special Projects Office",
+    "category": "Buildings",
+    "value": 415800000,
+    "completion_date": [
+     2025,
+     4,
+     21
+    ],
+    "pm": "Rahul Das",
+    "referenced": true,
+    "pkg": "81",
+    "state": "Delhi"
+   },
+   "process piping package \u2014 delhi pkg-82": {
+    "work": "Process Piping Package \u2014 Delhi Pkg-82",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Industrial Epc",
+    "value": 414200000,
+    "completion_date": [
+     2016,
+     7,
+     20
+    ],
+    "pm": "Meera Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "82",
+    "state": "Delhi"
+   },
+   "check dam \u2014 uttar pradesh pkg-83": {
+    "work": "Check Dam \u2014 Uttar Pradesh Pkg-83",
+    "client": "Mega Infrastructure Authority",
+    "category": "Irrigation",
+    "value": 314000000,
+    "completion_date": [
+     2016,
+     6,
+     12
+    ],
+    "pm": "Uma Sen",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "83",
+    "state": "Uttar Pradesh"
+   },
+   "road widening \u2014 uttar pradesh pkg-84": {
+    "work": "Road Widening \u2014 Uttar Pradesh Pkg-84",
+    "client": "Jal Nigam, Uttar Pradesh",
+    "category": "Roads Highways",
+    "value": 58500000,
+    "completion_date": [
+     2018,
+     6,
+     7
+    ],
+    "pm": "Tanvir Malhotra",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "84",
+    "state": "Uttar Pradesh"
+   },
+   "rob \u2014 uttar pradesh pkg-85": {
+    "work": "ROB \u2014 Uttar Pradesh Pkg-85",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Bridges Flyovers",
+    "value": 251000000,
+    "completion_date": [
+     2020,
+     3,
+     3
+    ],
+    "pm": "Amit Mukherjee",
+    "pkg": "85",
+    "state": "Uttar Pradesh"
+   },
+   "water treatment plant \u2014 delhi pkg-86": {
+    "work": "Water Treatment Plant \u2014 Delhi Pkg-86",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Water Treatment",
+    "value": 164000000,
+    "completion_date": [
+     2016,
+     2,
+     4
+    ],
+    "pm": "Sanjay Joshi",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "86",
+    "state": "Delhi"
+   },
+   "sewerage network \u2014 maharashtra pkg-87": {
+    "work": "Sewerage Network \u2014 Maharashtra Pkg-87",
+    "client": "Public Works Department, Govt of Maharashtra",
+    "category": "Sewerage Drainage",
+    "value": 176600000,
+    "completion_date": [
+     2011,
+     2,
+     23
+    ],
+    "pm": "Imran Joshi",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "87",
+    "state": "Maharashtra"
+   },
+   "residential quarters \u2014 delhi pkg-88": {
+    "work": "Residential Quarters \u2014 Delhi Pkg-88",
+    "client": "Arunodaya Infrastructure",
+    "category": "Buildings",
+    "value": 200500000,
+    "completion_date": [
+     2023,
+     10,
+     25
+    ],
+    "pm": "Neha Chopra",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "88",
+    "state": "Delhi"
+   },
+   "material handling plant \u2014 uttar pradesh pkg-89": {
+    "work": "Material Handling Plant \u2014 Uttar Pradesh Pkg-89",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Industrial Epc",
+    "value": 136500000,
+    "completion_date": [
+     2023,
+     1,
+     15
+    ],
+    "pm": "Rahul Menon",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "89",
+    "state": "Uttar Pradesh"
+   },
+   "canal lining \u2014 tamil nadu pkg-90": {
+    "work": "Canal Lining \u2014 Tamil Nadu Pkg-90",
+    "client": "Public Works Department, Govt of Tamil Nadu",
+    "category": "Irrigation",
+    "value": 260900000,
+    "completion_date": [
+     2014,
+     6,
+     20
+    ],
+    "pm": "Manoj Verma",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "90",
+    "state": "Tamil Nadu"
+   },
+   "highway construction \u2014 maharashtra pkg-91": {
+    "work": "Highway Construction \u2014 Maharashtra Pkg-91",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Roads Highways",
+    "value": 208700000,
+    "completion_date": [
+     2012,
+     2,
+     5
+    ],
+    "pm": "Neha Chopra",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "91",
+    "state": "Maharashtra"
+   },
+   "box culvert chain \u2014 tamil nadu pkg-92": {
+    "work": "Box Culvert Chain \u2014 Tamil Nadu Pkg-92",
+    "client": "Tamil Nadu Municipal Corporation",
+    "category": "Bridges Flyovers",
+    "value": 100500000,
+    "completion_date": [
+     2012,
+     2,
+     14
+    ],
+    "pm": "Lakshmi Ghosh",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "92",
+    "state": "Tamil Nadu"
+   },
+   "wtp augmentation \u2014 maharashtra pkg-93": {
+    "work": "WTP Augmentation \u2014 Maharashtra Pkg-93",
+    "client": "Public Works Department, Govt of Maharashtra",
+    "category": "Water Treatment",
+    "value": 214200000,
+    "completion_date": [
+     2021,
+     5,
+     26
+    ],
+    "pm": "Asha Nair",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "93",
+    "state": "Maharashtra"
+   },
+   "stp \u2014 jharkhand pkg-94": {
+    "work": "STP \u2014 Jharkhand Pkg-94",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Sewerage Drainage",
+    "value": 219300000,
+    "completion_date": [
+     2014,
+     9,
+     14
+    ],
+    "pm": "Tanvir Menon",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "94",
+    "state": "Jharkhand"
+   },
+   "institutional building \u2014 odisha pkg-95": {
+    "work": "Institutional Building \u2014 Odisha Pkg-95",
+    "client": "Central Works & Buildings Bureau",
+    "category": "Buildings",
+    "value": 352200000,
+    "completion_date": [
+     2018,
+     2,
+     22
+    ],
+    "pm": "Rahul Menon",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "95",
+    "state": "Odisha"
+   },
+   "material handling plant \u2014 maharashtra pkg-96": {
+    "work": "Material Handling Plant \u2014 Maharashtra Pkg-96",
+    "client": "Maharashtra Municipal Corporation",
+    "category": "Industrial Epc",
+    "value": 60800000,
+    "completion_date": [
+     2013,
+     5,
+     4
+    ],
+    "pm": "Sanjay Joshi",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "96",
+    "state": "Maharashtra"
+   },
+   "check dam \u2014 maharashtra pkg-97": {
+    "work": "Check Dam \u2014 Maharashtra Pkg-97",
+    "client": "Public Works Department, Govt of Maharashtra",
+    "category": "Irrigation",
+    "value": 307300000,
+    "completion_date": [
+     2018,
+     4,
+     12
+    ],
+    "pm": "Sanjay Joshi",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "97",
+    "state": "Maharashtra"
+   },
+   "road widening \u2014 odisha pkg-98": {
+    "work": "Road Widening \u2014 Odisha Pkg-98",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Roads Highways",
+    "value": 148500000,
+    "completion_date": [
+     2019,
+     9,
+     27
+    ],
+    "pm": "Suresh Das",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "98",
+    "state": "Odisha"
+   },
+   "flyover \u2014 delhi pkg-99": {
+    "work": "Flyover \u2014 Delhi Pkg-99",
+    "client": "Meridian Constructors & Co",
+    "category": "Bridges Flyovers",
+    "value": 231600000,
+    "completion_date": [
+     2016,
+     5,
+     18
+    ],
+    "pm": "Tanvir Menon",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "99",
+    "state": "Delhi"
+   },
+   "pumping station \u2014 rajasthan pkg-100": {
+    "work": "Pumping Station \u2014 Rajasthan Pkg-100",
+    "client": "Irrigation & Waterways Dept, Govt of Rajasthan",
+    "category": "Water Treatment",
+    "value": 177300000,
+    "completion_date": [
+     2011,
+     12,
+     13
+    ],
+    "pm": "Priya Patel",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "100",
+    "state": "Rajasthan"
+   },
+   "six-lane highway \u2014 uttar pradesh pkg-101": {
+    "work": "Six-Lane Highway \u2014 Uttar Pradesh Pkg-101",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Expressways",
+    "value": 977200000,
+    "completion_date": [
+     2018,
+     2,
+     8
+    ],
+    "pm": "Divya Singh",
+    "grade": "satisfactory",
+    "pkg": "101",
+    "state": "Uttar Pradesh"
+   },
+   "rail tunnel \u2014 jharkhand pkg-102": {
+    "work": "Rail Tunnel \u2014 Jharkhand Pkg-102",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Tunnels",
+    "value": 1722200000,
+    "completion_date": [
+     2015,
+     3,
+     5
+    ],
+    "pm": "Tanvir Menon",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "102",
+    "state": "Jharkhand"
+   },
+   "steel truss bridge \u2014 maharashtra pkg-103": {
+    "work": "Steel Truss Bridge \u2014 Maharashtra Pkg-103",
+    "client": "Public Works Department, Govt of Maharashtra",
+    "category": "Large Bridges",
+    "value": 586900000,
+    "completion_date": [
+     2010,
+     9,
+     30
+    ],
+    "pm": "Imran Joshi",
+    "grade": "very good",
+    "pkg": "103",
+    "state": "Maharashtra"
+   },
+   "six-lane highway \u2014 maharashtra pkg-104": {
+    "work": "Six-Lane Highway \u2014 Maharashtra Pkg-104",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Expressways",
+    "value": 860900000,
+    "completion_date": [
+     2016,
+     6,
+     28
+    ],
+    "pm": "Amit Iyer",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "104",
+    "state": "Maharashtra"
+   },
+   "hydro tunnel \u2014 west bengal pkg-105": {
+    "work": "Hydro Tunnel \u2014 West Bengal Pkg-105",
+    "client": "Suvarna Projects Limited",
+    "category": "Tunnels",
+    "value": 1015700000,
+    "completion_date": [
+     2018,
+     4,
+     2
+    ],
+    "pm": "Pooja Sen",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "105",
+    "state": "West Bengal"
+   },
+   "extradosed bridge \u2014 gujarat pkg-106": {
+    "work": "Extradosed Bridge \u2014 Gujarat Pkg-106",
+    "client": "National Special Projects Office",
+    "category": "Large Bridges",
+    "value": 400000000,
+    "completion_date": [
+     2012,
+     12,
+     8
+    ],
+    "pm": "Kavita Reddy",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "106",
+    "state": "Gujarat"
+   },
+   "ring road \u2014 uttar pradesh pkg-107": {
+    "work": "Ring Road \u2014 Uttar Pradesh Pkg-107",
+    "client": "National Expressway Development Authority",
+    "category": "Expressways",
+    "value": 1329700000,
+    "completion_date": [
+     2012,
+     8,
+     16
+    ],
+    "pm": "Sunita Joshi",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "107",
+    "state": "Uttar Pradesh"
+   },
+   "hydro tunnel \u2014 madhya pradesh pkg-108": {
+    "work": "Hydro Tunnel \u2014 Madhya Pradesh Pkg-108",
+    "client": "Mega Infrastructure Authority",
+    "category": "Tunnels",
+    "value": 1988800000,
+    "completion_date": [
+     2014,
+     10,
+     25
+    ],
+    "pm": "Tanvir Menon",
+    "grade": "good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "108",
+    "state": "Madhya Pradesh"
+   },
+   "cable stayed bridge \u2014 delhi pkg-109": {
+    "work": "Cable Stayed Bridge \u2014 Delhi Pkg-109",
+    "client": "National Special Projects Office",
+    "category": "Large Bridges",
+    "value": 1136000000,
+    "completion_date": [
+     2013,
+     12,
+     24
+    ],
+    "pm": "Naveen Roy",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "109",
+    "state": "Delhi"
+   },
+   "greenfield expressway \u2014 west bengal pkg-110": {
+    "work": "Greenfield Expressway \u2014 West Bengal Pkg-110",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Expressways",
+    "value": 2000000000,
+    "completion_date": [
+     2015,
+     1,
+     12
+    ],
+    "pm": "Farhan Rao",
+    "grade": "excellent",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "110",
+    "state": "West Bengal"
+   },
+   "rail tunnel \u2014 rajasthan pkg-111": {
+    "work": "Rail Tunnel \u2014 Rajasthan Pkg-111",
+    "client": "Arunodaya Infrastructure",
+    "category": "Tunnels",
+    "value": 526300000,
+    "completion_date": [
+     2019,
+     4,
+     14
+    ],
+    "pm": "Lakshmi Ghosh",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "111",
+    "state": "Rajasthan"
+   },
+   "steel truss bridge \u2014 gujarat pkg-112": {
+    "work": "Steel Truss Bridge \u2014 Gujarat Pkg-112",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Large Bridges",
+    "value": 1061900000,
+    "completion_date": [
+     2019,
+     5,
+     31
+    ],
+    "pm": "Lakshmi Ghosh",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "112",
+    "state": "Gujarat"
+   },
+   "ring road \u2014 uttar pradesh pkg-113": {
+    "work": "Ring Road \u2014 Uttar Pradesh Pkg-113",
+    "client": "National Special Projects Office",
+    "category": "Expressways",
+    "value": 2000000000,
+    "completion_date": [
+     2022,
+     7,
+     10
+    ],
+    "pm": "Priya Patel",
+    "referenced": true,
+    "pkg": "113",
+    "state": "Uttar Pradesh"
+   },
+   "rail tunnel \u2014 gujarat pkg-114": {
+    "work": "Rail Tunnel \u2014 Gujarat Pkg-114",
+    "client": "Jal Nigam, Gujarat",
+    "category": "Tunnels",
+    "value": 1277800000,
+    "completion_date": [
+     2010,
+     8,
+     23
+    ],
+    "pm": "Farhan Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "114",
+    "state": "Gujarat"
+   },
+   "cable stayed bridge \u2014 jharkhand pkg-115": {
+    "work": "Cable Stayed Bridge \u2014 Jharkhand Pkg-115",
+    "client": "Jal Nigam, Jharkhand",
+    "category": "Large Bridges",
+    "value": 814400000,
+    "completion_date": [
+     2018,
+     2,
+     23
+    ],
+    "pm": "Asha Nair",
+    "grade": "satisfactory",
+    "pkg": "115",
+    "state": "Jharkhand"
+   },
+   "six-lane highway \u2014 west bengal pkg-116": {
+    "work": "Six-Lane Highway \u2014 West Bengal Pkg-116",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Expressways",
+    "value": 2000000000,
+    "completion_date": [
+     2020,
+     2,
+     11
+    ],
+    "pm": "Chandan Banerjee",
+    "grade": "very good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "116",
+    "state": "West Bengal"
+   },
+   "hydro tunnel \u2014 jharkhand pkg-117": {
+    "work": "Hydro Tunnel \u2014 Jharkhand Pkg-117",
+    "client": "Arunodaya Infrastructure",
+    "category": "Tunnels",
+    "value": 474100000,
+    "completion_date": [
+     2022,
+     3,
+     19
+    ],
+    "pm": "Meera Roy",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "117",
+    "state": "Jharkhand"
+   },
+   "steel truss bridge \u2014 rajasthan pkg-118": {
+    "work": "Steel Truss Bridge \u2014 Rajasthan Pkg-118",
+    "client": "Central Works & Buildings Bureau",
+    "category": "Large Bridges",
+    "value": 400000000,
+    "completion_date": [
+     2017,
+     10,
+     2
+    ],
+    "pm": "Priya Gupta",
+    "grade": "good",
+    "referenced": true,
+    "pkg": "118",
+    "state": "Rajasthan"
+   },
+   "six-lane highway \u2014 tamil nadu pkg-119": {
+    "work": "Six-Lane Highway \u2014 Tamil Nadu Pkg-119",
+    "client": "Tamil Nadu Municipal Corporation",
+    "category": "Expressways",
+    "value": 1464800000,
+    "completion_date": [
+     2018,
+     9,
+     22
+    ],
+    "pm": "Priya Gupta",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "119",
+    "state": "Tamil Nadu"
+   },
+   "highway tunnel \u2014 west bengal pkg-120": {
+    "work": "Highway Tunnel \u2014 West Bengal Pkg-120",
+    "client": "Irrigation & Waterways Dept, Govt of West Bengal",
+    "category": "Tunnels",
+    "value": 746600000,
+    "completion_date": [
+     2023,
+     5,
+     20
+    ],
+    "pm": "Rahul Menon",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "120",
+    "state": "West Bengal"
+   },
+   "cable stayed bridge \u2014 uttar pradesh pkg-121": {
+    "work": "Cable Stayed Bridge \u2014 Uttar Pradesh Pkg-121",
+    "client": "Jal Nigam, Uttar Pradesh",
+    "category": "Large Bridges",
+    "value": 910400000,
+    "completion_date": [
+     2011,
+     2,
+     12
+    ],
+    "pm": "Tanvir Malhotra",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "121",
+    "state": "Uttar Pradesh"
+   },
+   "six-lane highway \u2014 odisha pkg-122": {
+    "work": "Six-Lane Highway \u2014 Odisha Pkg-122",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Expressways",
+    "value": 400000000,
+    "completion_date": [
+     2011,
+     6,
+     12
+    ],
+    "pm": "Imran Joshi",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "122",
+    "state": "Odisha"
+   },
+   "rail tunnel \u2014 west bengal pkg-123": {
+    "work": "Rail Tunnel \u2014 West Bengal Pkg-123",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Tunnels",
+    "value": 400000000,
+    "completion_date": [
+     2010,
+     2,
+     26
+    ],
+    "pm": "Jaya Desai",
+    "grade": "excellent",
+    "pkg": "123",
+    "state": "West Bengal"
+   },
+   "extradosed bridge \u2014 rajasthan pkg-124": {
+    "work": "Extradosed Bridge \u2014 Rajasthan Pkg-124",
+    "client": "Irrigation & Waterways Dept, Govt of Rajasthan",
+    "category": "Large Bridges",
+    "value": 775900000,
+    "completion_date": [
+     2021,
+     3,
+     1
+    ],
+    "pm": "Amit Mukherjee",
+    "referenced": true,
+    "pkg": "124",
+    "state": "Rajasthan"
+   },
+   "ring road \u2014 maharashtra pkg-125": {
+    "work": "Ring Road \u2014 Maharashtra Pkg-125",
+    "client": "Public Works Department, Govt of Maharashtra",
+    "category": "Expressways",
+    "value": 529900000,
+    "completion_date": [
+     2010,
+     3,
+     1
+    ],
+    "pm": "Rahul Menon",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "125",
+    "state": "Maharashtra"
+   },
+   "hydro tunnel \u2014 west bengal pkg-126": {
+    "work": "Hydro Tunnel \u2014 West Bengal Pkg-126",
+    "client": "Mega Infrastructure Authority",
+    "category": "Tunnels",
+    "value": 954600000,
+    "completion_date": [
+     2010,
+     8,
+     13
+    ],
+    "pm": "Priti Pillai",
+    "referenced": true,
+    "pkg": "126",
+    "state": "West Bengal"
+   },
+   "extradosed bridge \u2014 madhya pradesh pkg-127": {
+    "work": "Extradosed Bridge \u2014 Madhya Pradesh Pkg-127",
+    "client": "Meridian Constructors & Co",
+    "category": "Large Bridges",
+    "value": 1298800000,
+    "completion_date": [
+     2020,
+     11,
+     13
+    ],
+    "pm": "Suresh Desai",
+    "pkg": "127",
+    "state": "Madhya Pradesh"
+   },
+   "ring road \u2014 west bengal pkg-128": {
+    "work": "Ring Road \u2014 West Bengal Pkg-128",
+    "client": "Public Works Department, Govt of West Bengal",
+    "category": "Expressways",
+    "value": 400000000,
+    "completion_date": [
+     2023,
+     5,
+     23
+    ],
+    "pm": "Amit Iyer",
+    "grade": "very good",
+    "pkg": "128",
+    "state": "West Bengal"
+   },
+   "hydro tunnel \u2014 uttar pradesh pkg-129": {
+    "work": "Hydro Tunnel \u2014 Uttar Pradesh Pkg-129",
+    "client": "National Expressway Development Authority",
+    "category": "Tunnels",
+    "value": 400000000,
+    "completion_date": [
+     2016,
+     4,
+     20
+    ],
+    "pm": "Rahul Menon",
+    "grade": "good",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "129",
+    "state": "Uttar Pradesh"
+   },
+   "extradosed bridge \u2014 uttar pradesh pkg-130": {
+    "work": "Extradosed Bridge \u2014 Uttar Pradesh Pkg-130",
+    "client": "Jal Nigam, Uttar Pradesh",
+    "category": "Large Bridges",
+    "value": 414500000,
+    "completion_date": [
+     2018,
+     5,
+     18
+    ],
+    "pm": "Farhan Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "130",
+    "state": "Uttar Pradesh"
+   },
+   "pipeline laying \u2014 jharkhand pkg-131": {
+    "work": "Pipeline Laying \u2014 Jharkhand Pkg-131",
+    "client": "Jal Nigam, Jharkhand",
+    "category": "Water Supply",
+    "value": 69200000,
+    "completion_date": [
+     2021,
+     8,
+     17
+    ],
+    "pm": "Gautam Joshi",
+    "grade": "satisfactory",
+    "pkg": "131",
+    "state": "Jharkhand"
+   },
+   "patch repair \u2014 delhi pkg-132": {
+    "work": "Patch Repair \u2014 Delhi Pkg-132",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Roads Maintenance",
+    "value": 20400000,
+    "completion_date": [
+     2015,
+     2,
+     17
+    ],
+    "pm": "Imran Joshi",
+    "grade": "very good",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "132",
+    "state": "Delhi"
+   },
+   "community centre \u2014 jharkhand pkg-133": {
+    "work": "Community Centre \u2014 Jharkhand Pkg-133",
+    "client": "Central Works & Buildings Bureau",
+    "category": "Small Buildings",
+    "value": 68700000,
+    "completion_date": [
+     2012,
+     3,
+     25
+    ],
+    "pm": "Neha Chopra",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "133",
+    "state": "Jharkhand"
+   },
+   "handpump installation \u2014 uttar pradesh pkg-134": {
+    "work": "Handpump Installation \u2014 Uttar Pradesh Pkg-134",
+    "client": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
+    "category": "Water Supply",
+    "value": 48000000,
+    "completion_date": [
+     2024,
+     12,
+     27
+    ],
+    "pm": "Naveen Roy",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "134",
+    "state": "Uttar Pradesh"
+   },
+   "drainage works \u2014 gujarat pkg-135": {
+    "work": "Drainage Works \u2014 Gujarat Pkg-135",
+    "client": "Public Health Engineering Dept, Gujarat",
+    "category": "Roads Maintenance",
+    "value": 23300000,
+    "completion_date": [
+     2010,
+     10,
+     16
+    ],
+    "pm": "Priya Gupta",
+    "pkg": "135",
+    "state": "Gujarat"
+   },
+   "school building \u2014 odisha pkg-136": {
+    "work": "School Building \u2014 Odisha Pkg-136",
+    "client": "Public Health Engineering Dept, Odisha",
+    "category": "Small Buildings",
+    "value": 12200000,
+    "completion_date": [
+     2015,
+     5,
+     8
+    ],
+    "pm": "Rajesh Rao",
+    "grade": "satisfactory",
+    "pkg": "136",
+    "state": "Odisha"
+   },
+   "pipeline laying \u2014 delhi pkg-137": {
+    "work": "Pipeline Laying \u2014 Delhi Pkg-137",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Water Supply",
+    "value": 19200000,
+    "completion_date": [
+     2018,
+     1,
+     31
+    ],
+    "pm": "Tanvir Menon",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "137",
+    "state": "Delhi"
+   },
+   "patch repair \u2014 gujarat pkg-138": {
+    "work": "Patch Repair \u2014 Gujarat Pkg-138",
+    "client": "Public Works Department, Govt of Gujarat",
+    "category": "Roads Maintenance",
+    "value": 12000000,
+    "completion_date": [
+     2018,
+     3,
+     2
+    ],
+    "pm": "Amit Mukherjee",
+    "pkg": "138",
+    "state": "Gujarat"
+   },
+   "community centre \u2014 uttar pradesh pkg-139": {
+    "work": "Community Centre \u2014 Uttar Pradesh Pkg-139",
+    "client": "National Expressway Development Authority",
+    "category": "Small Buildings",
+    "value": 28000000,
+    "completion_date": [
+     2020,
+     1,
+     30
+    ],
+    "pm": "Amit Iyer",
+    "grade": "excellent",
+    "referenced": true,
+    "pkg": "139",
+    "state": "Uttar Pradesh"
+   },
+   "pipeline laying \u2014 maharashtra pkg-140": {
+    "work": "Pipeline Laying \u2014 Maharashtra Pkg-140",
+    "client": "Peninsular Petroleum Corporation",
+    "category": "Water Supply",
+    "value": 28200000,
+    "completion_date": [
+     2019,
+     8,
+     28
+    ],
+    "pm": "Rahul Menon",
+    "grade": "excellent",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "140",
+    "state": "Maharashtra"
+   },
+   "drainage works \u2014 tamil nadu pkg-141": {
+    "work": "Drainage Works \u2014 Tamil Nadu Pkg-141",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Roads Maintenance",
+    "value": 39900000,
+    "completion_date": [
+     2023,
+     4,
+     12
+    ],
+    "pm": "Jaya Desai",
+    "referenced": true,
+    "pkg": "141",
+    "state": "Tamil Nadu"
+   },
+   "anganwadi centre \u2014 jharkhand pkg-142": {
+    "work": "Anganwadi Centre \u2014 Jharkhand Pkg-142",
+    "client": "National Expressway Development Authority",
+    "category": "Small Buildings",
+    "value": 54300000,
+    "completion_date": [
+     2013,
+     3,
+     9
+    ],
+    "pm": "Priya Patel",
+    "grade": "good",
+    "pkg": "142",
+    "state": "Jharkhand"
+   },
+   "pipeline laying \u2014 tamil nadu pkg-143": {
+    "work": "Pipeline Laying \u2014 Tamil Nadu Pkg-143",
+    "client": "Mahanadi Steel Corporation",
+    "category": "Water Supply",
+    "value": 31400000,
+    "completion_date": [
+     2016,
+     11,
+     4
+    ],
+    "pm": "Sunita Joshi",
+    "grade": "satisfactory",
+    "pkg": "143",
+    "state": "Tamil Nadu"
+   },
+   "drainage works \u2014 uttar pradesh pkg-144": {
+    "work": "Drainage Works \u2014 Uttar Pradesh Pkg-144",
+    "client": "Lakshya Engineering & Construction",
+    "category": "Roads Maintenance",
+    "value": 56700000,
+    "completion_date": [
+     2017,
+     1,
+     3
+    ],
+    "pm": "Neha Chopra",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "144",
+    "state": "Uttar Pradesh"
+   },
+   "school building \u2014 madhya pradesh pkg-145": {
+    "work": "School Building \u2014 Madhya Pradesh Pkg-145",
+    "client": "Mega Infrastructure Authority",
+    "category": "Small Buildings",
+    "value": 30000000,
+    "completion_date": [
+     2025,
+     6,
+     26
+    ],
+    "pm": "Asha Nair",
+    "grade": "good",
+    "pkg": "145",
+    "state": "Madhya Pradesh"
+   },
+   "mini water supply \u2014 madhya pradesh pkg-146": {
+    "work": "Mini Water Supply \u2014 Madhya Pradesh Pkg-146",
+    "client": "Suvarna Projects Limited",
+    "category": "Water Supply",
+    "value": 28000000,
+    "completion_date": [
+     2014,
+     2,
+     10
+    ],
+    "pm": "Amit Iyer",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "146",
+    "state": "Madhya Pradesh"
+   },
+   "patch repair \u2014 maharashtra pkg-147": {
+    "work": "Patch Repair \u2014 Maharashtra Pkg-147",
+    "client": "Maharashtra Municipal Corporation",
+    "category": "Roads Maintenance",
+    "value": 19000000,
+    "completion_date": [
+     2021,
+     8,
+     18
+    ],
+    "pm": "Lakshmi Ghosh",
+    "grade": "good",
+    "pkg": "147",
+    "state": "Maharashtra"
+   },
+   "school building \u2014 delhi pkg-148": {
+    "work": "School Building \u2014 Delhi Pkg-148",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Small Buildings",
+    "value": 15400000,
+    "completion_date": [
+     2022,
+     4,
+     16
+    ],
+    "pm": "Rahul Menon",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "148",
+    "state": "Delhi"
+   },
+   "mini water supply \u2014 delhi pkg-149": {
+    "work": "Mini Water Supply \u2014 Delhi Pkg-149",
+    "client": "Suvarna Projects Limited",
+    "category": "Water Supply",
+    "value": 10600000,
+    "completion_date": [
+     2011,
+     4,
+     10
+    ],
+    "pm": "Deepa Chatterjee",
+    "grade": "good",
+    "referenced": true,
+    "role": "prime",
+    "pkg": "149",
+    "state": "Delhi"
+   },
+   "rural road upgradation \u2014 jharkhand pkg-150": {
+    "work": "Rural Road Upgradation \u2014 Jharkhand Pkg-150",
+    "client": "Arunodaya Infrastructure",
+    "category": "Roads Maintenance",
+    "value": 29900000,
+    "completion_date": [
+     2017,
+     9,
+     26
+    ],
+    "pm": "Divya Singh",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "150",
+    "state": "Jharkhand"
+   },
+   "anganwadi centre \u2014 gujarat pkg-151": {
+    "work": "Anganwadi Centre \u2014 Gujarat Pkg-151",
+    "client": "Trishakti Power Generation Corporation",
+    "category": "Small Buildings",
+    "value": 25000000,
+    "completion_date": [
+     2020,
+     6,
+     3
+    ],
+    "pm": "Farhan Roy",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "151",
+    "state": "Gujarat"
+   },
+   "mini water supply \u2014 west bengal pkg-152": {
+    "work": "Mini Water Supply \u2014 West Bengal Pkg-152",
+    "client": "Irrigation & Waterways Dept, Govt of West Bengal",
+    "category": "Water Supply",
+    "value": 16700000,
+    "completion_date": [
+     2025,
+     2,
+     17
+    ],
+    "pm": "Kavita Reddy",
+    "grade": "very good",
+    "referenced": true,
+    "pkg": "152",
+    "state": "West Bengal"
+   },
+   "rural road upgradation \u2014 jharkhand pkg-153": {
+    "work": "Rural Road Upgradation \u2014 Jharkhand Pkg-153",
+    "client": "Jharkhand Municipal Corporation",
+    "category": "Roads Maintenance",
+    "value": 69500000,
+    "completion_date": [
+     2017,
+     11,
+     3
+    ],
+    "pm": "Rahul Menon",
+    "grade": "excellent",
+    "pkg": "153",
+    "state": "Jharkhand"
+   },
+   "school building \u2014 delhi pkg-154": {
+    "work": "School Building \u2014 Delhi Pkg-154",
+    "client": "Subarnarekha Valley Corporation",
+    "category": "Small Buildings",
+    "value": 19400000,
+    "completion_date": [
+     2017,
+     9,
+     5
+    ],
+    "pm": "Uma Sen",
+    "grade": "satisfactory",
+    "referenced": true,
+    "role": "jv partner",
+    "pkg": "154",
+    "state": "Delhi"
+   },
+   "handpump installation \u2014 gujarat pkg-155": {
+    "work": "Handpump Installation \u2014 Gujarat Pkg-155",
+    "client": "Gujarat Municipal Corporation",
+    "category": "Water Supply",
+    "value": 16400000,
+    "completion_date": [
+     2024,
+     8,
+     28
+    ],
+    "pm": "Suresh Desai",
+    "grade": "satisfactory",
+    "referenced": true,
+    "pkg": "155",
+    "state": "Gujarat"
+   }
+  },
+  "clients": {
+   "National Special Projects Office": [
+    "cable stayed bridge \u2014 delhi pkg-109",
+    "canal lining \u2014 delhi pkg-34",
+    "extradosed bridge \u2014 gujarat pkg-106",
+    "institutional building \u2014 delhi pkg-81",
+    "rcc bridge \u2014 gujarat pkg-1",
+    "ring road \u2014 uttar pradesh pkg-113"
+   ],
+   "Mega Infrastructure Authority": [
+    "check dam \u2014 uttar pradesh pkg-83",
+    "hydro tunnel \u2014 madhya pradesh pkg-108",
+    "hydro tunnel \u2014 west bengal pkg-126",
+    "institutional building \u2014 west bengal pkg-74",
+    "material handling plant \u2014 madhya pradesh pkg-68",
+    "school building \u2014 madhya pradesh pkg-145",
+    "wtp augmentation \u2014 uttar pradesh pkg-2"
+   ],
+   "Public Works Department, Govt of Gujarat": [
+    "check dam \u2014 gujarat pkg-62",
+    "patch repair \u2014 gujarat pkg-138",
+    "stp \u2014 gujarat pkg-3"
+   ],
+   "Peninsular Petroleum Corporation": [
+    "check dam \u2014 maharashtra pkg-69",
+    "hospital block \u2014 odisha pkg-39",
+    "institutional building \u2014 uttar pradesh pkg-11",
+    "pipeline laying \u2014 maharashtra pkg-140",
+    "residential quarters \u2014 odisha pkg-4",
+    "road widening \u2014 odisha pkg-98",
+    "water treatment plant \u2014 delhi pkg-86"
+   ],
+   "Suvarna Projects Limited": [
+    "check dam \u2014 delhi pkg-76",
+    "flyover \u2014 delhi pkg-15",
+    "hydro tunnel \u2014 west bengal pkg-105",
+    "lift irrigation \u2014 west bengal pkg-13",
+    "mini water supply \u2014 delhi pkg-149",
+    "mini water supply \u2014 madhya pradesh pkg-146",
+    "rigid pavement \u2014 delhi pkg-28",
+    "stp \u2014 west bengal pkg-73",
+    "substation epc \u2014 madhya pradesh pkg-5"
+   ],
+   "Public Health Engineering Dept, Odisha": [
+    "bituminous overlay \u2014 odisha pkg-35",
+    "bituminous overlay \u2014 odisha pkg-63",
+    "lift irrigation \u2014 odisha pkg-6",
+    "school building \u2014 odisha pkg-136",
+    "sewerage network \u2014 odisha pkg-17",
+    "six-lane highway \u2014 odisha pkg-122",
+    "stormwater drainage \u2014 odisha pkg-59",
+    "stp \u2014 odisha pkg-45"
+   ],
+   "Mahanadi Steel Corporation": [
+    "drainage works \u2014 tamil nadu pkg-141",
+    "institutional building \u2014 gujarat pkg-32",
+    "pipeline laying \u2014 tamil nadu pkg-143",
+    "process piping package \u2014 tamil nadu pkg-54",
+    "rcc bridge \u2014 tamil nadu pkg-64",
+    "rigid pavement \u2014 madhya pradesh pkg-49",
+    "rigid pavement \u2014 madhya pradesh pkg-7",
+    "rigid pavement \u2014 tamil nadu pkg-70",
+    "stormwater drainage \u2014 tamil nadu pkg-52",
+    "substation epc \u2014 tamil nadu pkg-19",
+    "water treatment plant \u2014 madhya pradesh pkg-23",
+    "wtp augmentation \u2014 tamil nadu pkg-9"
+   ],
+   "Meridian Constructors & Co": [
+    "box culvert chain \u2014 madhya pradesh pkg-57",
+    "extradosed bridge \u2014 madhya pradesh pkg-127",
+    "flyover \u2014 delhi pkg-99",
+    "flyover \u2014 gujarat pkg-8",
+    "road widening \u2014 madhya pradesh pkg-42",
+    "stormwater drainage \u2014 madhya pradesh pkg-24"
+   ],
+   "Irrigation & Waterways Dept, Govt of Rajasthan": [
+    "check dam \u2014 rajasthan pkg-27",
+    "extradosed bridge \u2014 rajasthan pkg-124",
+    "lift irrigation \u2014 rajasthan pkg-41",
+    "pumping station \u2014 rajasthan pkg-100",
+    "sewerage network \u2014 rajasthan pkg-10",
+    "water treatment plant \u2014 rajasthan pkg-58"
+   ],
+   "Jal Nigam, Jharkhand": [
+    "cable stayed bridge \u2014 jharkhand pkg-115",
+    "material handling plant \u2014 jharkhand pkg-12",
+    "pipeline laying \u2014 jharkhand pkg-131"
+   ],
+   "Trishakti Power Generation Corporation": [
+    "anganwadi centre \u2014 gujarat pkg-151",
+    "check dam \u2014 delhi pkg-55",
+    "flyover \u2014 uttar pradesh pkg-43",
+    "greenfield expressway \u2014 west bengal pkg-110",
+    "material handling plant \u2014 uttar pradesh pkg-89",
+    "pipeline laying \u2014 delhi pkg-137",
+    "process piping package \u2014 delhi pkg-75",
+    "process piping package \u2014 gujarat pkg-33",
+    "rail tunnel \u2014 west bengal pkg-123",
+    "residential quarters \u2014 uttar pradesh pkg-25",
+    "road widening \u2014 west bengal pkg-14",
+    "rob \u2014 uttar pradesh pkg-85",
+    "school building \u2014 delhi pkg-148",
+    "six-lane highway \u2014 west bengal pkg-116",
+    "steel truss bridge \u2014 gujarat pkg-112",
+    "stormwater drainage \u2014 gujarat pkg-80",
+    "stp \u2014 uttar pradesh pkg-31",
+    "water treatment plant \u2014 west bengal pkg-44",
+    "wtp augmentation \u2014 delhi pkg-37"
+   ],
+   "Tamil Nadu Municipal Corporation": [
+    "box culvert chain \u2014 tamil nadu pkg-92",
+    "pumping station \u2014 tamil nadu pkg-16",
+    "six-lane highway \u2014 tamil nadu pkg-119"
+   ],
+   "Lakshya Engineering & Construction": [
+    "drainage works \u2014 uttar pradesh pkg-144",
+    "hospital block \u2014 west bengal pkg-18",
+    "hospital block \u2014 west bengal pkg-46",
+    "residential quarters \u2014 west bengal pkg-67",
+    "six-lane highway \u2014 uttar pradesh pkg-101",
+    "wtp augmentation \u2014 west bengal pkg-30",
+    "wtp augmentation \u2014 west bengal pkg-51"
+   ],
+   "National Expressway Development Authority": [
+    "anganwadi centre \u2014 jharkhand pkg-142",
+    "community centre \u2014 uttar pradesh pkg-139",
+    "hydro tunnel \u2014 uttar pradesh pkg-129",
+    "lift irrigation \u2014 madhya pradesh pkg-20",
+    "material handling plant \u2014 jharkhand pkg-61",
+    "material handling plant \u2014 uttar pradesh pkg-47",
+    "process piping package \u2014 uttar pradesh pkg-40",
+    "rigid pavement \u2014 jharkhand pkg-56",
+    "ring road \u2014 uttar pradesh pkg-107"
+   ],
+   "Public Works Department, Govt of Maharashtra": [
+    "check dam \u2014 maharashtra pkg-97",
+    "ring road \u2014 maharashtra pkg-125",
+    "road widening \u2014 maharashtra pkg-21",
+    "sewerage network \u2014 maharashtra pkg-87",
+    "steel truss bridge \u2014 maharashtra pkg-103",
+    "wtp augmentation \u2014 maharashtra pkg-93"
+   ],
+   "Jharkhand Municipal Corporation": [
+    "rcc bridge \u2014 jharkhand pkg-22",
+    "rural road upgradation \u2014 jharkhand pkg-153",
+    "wtp augmentation \u2014 jharkhand pkg-72"
+   ],
+   "Irrigation & Waterways Dept, Govt of Uttar Pradesh": [
+    "handpump installation \u2014 uttar pradesh pkg-134",
+    "material handling plant \u2014 uttar pradesh pkg-26"
+   ],
+   "Arunodaya Infrastructure": [
+    "highway construction \u2014 rajasthan pkg-77",
+    "hydro tunnel \u2014 jharkhand pkg-117",
+    "rail tunnel \u2014 rajasthan pkg-111",
+    "residential quarters \u2014 delhi pkg-88",
+    "rob \u2014 delhi pkg-36",
+    "rob \u2014 jharkhand pkg-29",
+    "rural road upgradation \u2014 jharkhand pkg-150"
+   ],
+   "Central Works & Buildings Bureau": [
+    "community centre \u2014 jharkhand pkg-133",
+    "hospital block \u2014 rajasthan pkg-53",
+    "institutional building \u2014 odisha pkg-95",
+    "pumping station \u2014 odisha pkg-79",
+    "steel truss bridge \u2014 rajasthan pkg-118",
+    "stp \u2014 jharkhand pkg-38"
+   ],
+   "Subarnarekha Valley Corporation": [
+    "canal lining \u2014 uttar pradesh pkg-48",
+    "flyover \u2014 jharkhand pkg-78",
+    "highway construction \u2014 maharashtra pkg-91",
+    "patch repair \u2014 delhi pkg-132",
+    "process piping package \u2014 delhi pkg-82",
+    "rail tunnel \u2014 jharkhand pkg-102",
+    "school building \u2014 delhi pkg-154",
+    "six-lane highway \u2014 maharashtra pkg-104",
+    "stp \u2014 jharkhand pkg-94"
+   ],
+   "Maharashtra Municipal Corporation": [
+    "material handling plant \u2014 maharashtra pkg-96",
+    "patch repair \u2014 maharashtra pkg-147",
+    "rcc bridge \u2014 maharashtra pkg-50"
+   ],
+   "Irrigation & Waterways Dept, Govt of West Bengal": [
+    "highway tunnel \u2014 west bengal pkg-120",
+    "hospital block \u2014 west bengal pkg-60",
+    "mini water supply \u2014 west bengal pkg-152"
+   ],
+   "Jal Nigam, Uttar Pradesh": [
+    "cable stayed bridge \u2014 uttar pradesh pkg-121",
+    "extradosed bridge \u2014 uttar pradesh pkg-130",
+    "pumping station \u2014 uttar pradesh pkg-65",
+    "road widening \u2014 uttar pradesh pkg-84"
+   ],
+   "Public Health Engineering Dept, Gujarat": [
+    "drainage works \u2014 gujarat pkg-135",
+    "stp \u2014 gujarat pkg-66"
+   ],
+   "Jal Nigam, Gujarat": [
+    "rail tunnel \u2014 gujarat pkg-114",
+    "rob \u2014 gujarat pkg-71"
+   ],
+   "Public Works Department, Govt of Tamil Nadu": [
+    "canal lining \u2014 tamil nadu pkg-90"
+   ],
+   "Public Works Department, Govt of West Bengal": [
+    "ring road \u2014 west bengal pkg-128"
+   ],
+   "Gujarat Municipal Corporation": [
+    "handpump installation \u2014 gujarat pkg-155"
+   ]
+  },
+  "engineers": {
+   "Suresh Desai": [
+    "extradosed bridge \u2014 madhya pradesh pkg-127",
+    "handpump installation \u2014 gujarat pkg-155",
+    "rcc bridge \u2014 gujarat pkg-1",
+    "residential quarters \u2014 odisha pkg-4",
+    "wtp augmentation \u2014 jharkhand pkg-72"
+   ],
+   "Meera Roy": [
+    "hospital block \u2014 odisha pkg-39",
+    "hydro tunnel \u2014 jharkhand pkg-117",
+    "process piping package \u2014 delhi pkg-82",
+    "pumping station \u2014 uttar pradesh pkg-65",
+    "rob \u2014 jharkhand pkg-29",
+    "sewerage network \u2014 odisha pkg-17",
+    "wtp augmentation \u2014 uttar pradesh pkg-2"
+   ],
+   "Farhan Roy": [
+    "anganwadi centre \u2014 gujarat pkg-151",
+    "extradosed bridge \u2014 uttar pradesh pkg-130",
+    "rail tunnel \u2014 gujarat pkg-114",
+    "rcc bridge \u2014 jharkhand pkg-22",
+    "stormwater drainage \u2014 gujarat pkg-80",
+    "stp \u2014 gujarat pkg-3"
+   ],
+   "Meera Banerjee": [
+    "bituminous overlay \u2014 odisha pkg-63",
+    "check dam \u2014 rajasthan pkg-27",
+    "pumping station \u2014 tamil nadu pkg-16",
+    "rigid pavement \u2014 tamil nadu pkg-70",
+    "road widening \u2014 west bengal pkg-14",
+    "substation epc \u2014 madhya pradesh pkg-5"
+   ],
+   "Jaya Desai": [
+    "drainage works \u2014 tamil nadu pkg-141",
+    "lift irrigation \u2014 odisha pkg-6",
+    "rail tunnel \u2014 west bengal pkg-123",
+    "stormwater drainage \u2014 odisha pkg-59",
+    "stp \u2014 gujarat pkg-66"
+   ],
+   "Amit Iyer": [
+    "community centre \u2014 uttar pradesh pkg-139",
+    "mini water supply \u2014 madhya pradesh pkg-146",
+    "rigid pavement \u2014 madhya pradesh pkg-7",
+    "ring road \u2014 west bengal pkg-128",
+    "six-lane highway \u2014 maharashtra pkg-104"
+   ],
+   "Kavita Reddy": [
+    "extradosed bridge \u2014 gujarat pkg-106",
+    "flyover \u2014 gujarat pkg-8",
+    "hospital block \u2014 rajasthan pkg-53",
+    "mini water supply \u2014 west bengal pkg-152",
+    "process piping package \u2014 delhi pkg-75"
+   ],
+   "Meera Chatterjee": [
+    "rigid pavement \u2014 jharkhand pkg-56",
+    "wtp augmentation \u2014 tamil nadu pkg-9"
+   ],
+   "Sanjay Joshi": [
+    "check dam \u2014 maharashtra pkg-97",
+    "material handling plant \u2014 maharashtra pkg-96",
+    "sewerage network \u2014 rajasthan pkg-10",
+    "stp \u2014 west bengal pkg-73",
+    "water treatment plant \u2014 delhi pkg-86",
+    "wtp augmentation \u2014 delhi pkg-37"
+   ],
+   "Amit Mukherjee": [
+    "extradosed bridge \u2014 rajasthan pkg-124",
+    "institutional building \u2014 uttar pradesh pkg-11",
+    "patch repair \u2014 gujarat pkg-138",
+    "rob \u2014 uttar pradesh pkg-85"
+   ],
+   "Imran Joshi": [
+    "material handling plant \u2014 jharkhand pkg-12",
+    "patch repair \u2014 delhi pkg-132",
+    "sewerage network \u2014 maharashtra pkg-87",
+    "six-lane highway \u2014 odisha pkg-122",
+    "steel truss bridge \u2014 maharashtra pkg-103"
+   ],
+   "Divya Singh": [
+    "lift irrigation \u2014 west bengal pkg-13",
+    "rural road upgradation \u2014 jharkhand pkg-150",
+    "six-lane highway \u2014 uttar pradesh pkg-101"
+   ],
+   "Sunita Joshi": [
+    "check dam \u2014 delhi pkg-76",
+    "flyover \u2014 delhi pkg-15",
+    "pipeline laying \u2014 tamil nadu pkg-143",
+    "residential quarters \u2014 uttar pradesh pkg-25",
+    "rigid pavement \u2014 delhi pkg-28",
+    "ring road \u2014 uttar pradesh pkg-107"
+   ],
+   "Deepa Chatterjee": [
+    "hospital block \u2014 west bengal pkg-18",
+    "institutional building \u2014 gujarat pkg-32",
+    "mini water supply \u2014 delhi pkg-149",
+    "stormwater drainage \u2014 madhya pradesh pkg-24"
+   ],
+   "Suresh Chopra": [
+    "process piping package \u2014 uttar pradesh pkg-40",
+    "substation epc \u2014 tamil nadu pkg-19"
+   ],
+   "Priya Patel": [
+    "anganwadi centre \u2014 jharkhand pkg-142",
+    "lift irrigation \u2014 madhya pradesh pkg-20",
+    "pumping station \u2014 rajasthan pkg-100",
+    "ring road \u2014 uttar pradesh pkg-113"
+   ],
+   "Neha Chopra": [
+    "bituminous overlay \u2014 odisha pkg-35",
+    "community centre \u2014 jharkhand pkg-133",
+    "drainage works \u2014 uttar pradesh pkg-144",
+    "highway construction \u2014 maharashtra pkg-91",
+    "residential quarters \u2014 delhi pkg-88",
+    "residential quarters \u2014 west bengal pkg-67",
+    "road widening \u2014 maharashtra pkg-21",
+    "rob \u2014 delhi pkg-36",
+    "wtp augmentation \u2014 west bengal pkg-30"
+   ],
+   "Pooja Bose": [
+    "hospital block \u2014 west bengal pkg-46",
+    "process piping package \u2014 tamil nadu pkg-54",
+    "water treatment plant \u2014 madhya pradesh pkg-23"
+   ],
+   "Farhan Rao": [
+    "greenfield expressway \u2014 west bengal pkg-110",
+    "material handling plant \u2014 uttar pradesh pkg-26"
+   ],
+   "Naveen Roy": [
+    "cable stayed bridge \u2014 delhi pkg-109",
+    "check dam \u2014 gujarat pkg-62",
+    "handpump installation \u2014 uttar pradesh pkg-134",
+    "stp \u2014 odisha pkg-45",
+    "stp \u2014 uttar pradesh pkg-31"
+   ],
+   "Chandan Banerjee": [
+    "process piping package \u2014 gujarat pkg-33",
+    "six-lane highway \u2014 west bengal pkg-116",
+    "wtp augmentation \u2014 west bengal pkg-51"
+   ],
+   "Priti Pillai": [
+    "canal lining \u2014 delhi pkg-34",
+    "flyover \u2014 uttar pradesh pkg-43",
+    "hospital block \u2014 west bengal pkg-60",
+    "hydro tunnel \u2014 west bengal pkg-126",
+    "material handling plant \u2014 madhya pradesh pkg-68"
+   ],
+   "Asha Nair": [
+    "cable stayed bridge \u2014 jharkhand pkg-115",
+    "school building \u2014 madhya pradesh pkg-145",
+    "stp \u2014 jharkhand pkg-38",
+    "wtp augmentation \u2014 maharashtra pkg-93"
+   ],
+   "Suresh Das": [
+    "lift irrigation \u2014 rajasthan pkg-41",
+    "road widening \u2014 odisha pkg-98"
+   ],
+   "Lakshmi Ghosh": [
+    "box culvert chain \u2014 tamil nadu pkg-92",
+    "patch repair \u2014 maharashtra pkg-147",
+    "rail tunnel \u2014 rajasthan pkg-111",
+    "road widening \u2014 madhya pradesh pkg-42",
+    "steel truss bridge \u2014 gujarat pkg-112"
+   ],
+   "Pooja Sen": [
+    "hydro tunnel \u2014 west bengal pkg-105",
+    "water treatment plant \u2014 west bengal pkg-44"
+   ],
+   "Rajesh Rao": [
+    "material handling plant \u2014 uttar pradesh pkg-47",
+    "rcc bridge \u2014 maharashtra pkg-50",
+    "school building \u2014 odisha pkg-136"
+   ],
+   "Gautam Joshi": [
+    "canal lining \u2014 uttar pradesh pkg-48",
+    "material handling plant \u2014 jharkhand pkg-61",
+    "pipeline laying \u2014 jharkhand pkg-131"
+   ],
+   "Rahul Das": [
+    "institutional building \u2014 delhi pkg-81",
+    "institutional building \u2014 west bengal pkg-74",
+    "rcc bridge \u2014 tamil nadu pkg-64",
+    "rigid pavement \u2014 madhya pradesh pkg-49"
+   ],
+   "Manoj Verma": [
+    "canal lining \u2014 tamil nadu pkg-90",
+    "stormwater drainage \u2014 tamil nadu pkg-52"
+   ],
+   "Tanvir Malhotra": [
+    "cable stayed bridge \u2014 uttar pradesh pkg-121",
+    "check dam \u2014 delhi pkg-55",
+    "flyover \u2014 jharkhand pkg-78",
+    "road widening \u2014 uttar pradesh pkg-84"
+   ],
+   "Rohit Singh": [
+    "box culvert chain \u2014 madhya pradesh pkg-57",
+    "check dam \u2014 maharashtra pkg-69",
+    "rob \u2014 gujarat pkg-71"
+   ],
+   "Tanvir Menon": [
+    "flyover \u2014 delhi pkg-99",
+    "hydro tunnel \u2014 madhya pradesh pkg-108",
+    "pipeline laying \u2014 delhi pkg-137",
+    "rail tunnel \u2014 jharkhand pkg-102",
+    "stp \u2014 jharkhand pkg-94",
+    "water treatment plant \u2014 rajasthan pkg-58"
+   ],
+   "Farhan Khan": [
+    "highway construction \u2014 rajasthan pkg-77"
+   ],
+   "Uma Sen": [
+    "check dam \u2014 uttar pradesh pkg-83",
+    "pumping station \u2014 odisha pkg-79",
+    "school building \u2014 delhi pkg-154"
+   ],
+   "Rahul Menon": [
+    "highway tunnel \u2014 west bengal pkg-120",
+    "hydro tunnel \u2014 uttar pradesh pkg-129",
+    "institutional building \u2014 odisha pkg-95",
+    "material handling plant \u2014 uttar pradesh pkg-89",
+    "pipeline laying \u2014 maharashtra pkg-140",
+    "ring road \u2014 maharashtra pkg-125",
+    "rural road upgradation \u2014 jharkhand pkg-153",
+    "school building \u2014 delhi pkg-148"
+   ],
+   "Priya Gupta": [
+    "drainage works \u2014 gujarat pkg-135",
+    "six-lane highway \u2014 tamil nadu pkg-119",
+    "steel truss bridge \u2014 rajasthan pkg-118"
+   ]
+  },
+  "people": [
+   "Amit Iyer",
+   "Amit Mukherjee",
+   "Asha Bose",
+   "Asha Nair",
+   "Chandan Banerjee",
+   "Deepa Chatterjee",
+   "Divya Singh",
+   "Farhan Khan",
+   "Farhan Rao",
+   "Farhan Roy",
+   "Gautam Joshi",
+   "Imran Joshi",
+   "Jaya Desai",
+   "Kavita Reddy",
+   "Lakshmi Ghosh",
+   "Manoj Kapoor",
+   "Manoj Verma",
+   "Meera Banerjee",
+   "Meera Chatterjee",
+   "Meera Roy",
+   "Naveen Roy",
+   "Neha Chopra",
+   "Pooja Bose",
+   "Pooja Sen",
+   "Priti Pillai",
+   "Priya Gupta",
+   "Priya Patel",
+   "Rahul Das",
+   "Rahul Menon",
+   "Rajesh Rao",
+   "Rohit Singh",
+   "Sanjay Joshi",
+   "Sunita Joshi",
+   "Suresh Chopra",
+   "Suresh Das",
+   "Suresh Desai",
+   "Tanvir Malhotra",
+   "Tanvir Menon",
+   "Uma Sen"
+  ]
+ }
+}

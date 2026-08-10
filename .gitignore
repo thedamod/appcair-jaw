@@ -1,0 +1,5 @@
+BITS-Hackathon-Dataset/
+__pycache__/
+*.pyc
+verify/kg_mine.json
+verify/verdicts.json

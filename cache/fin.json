@@ -1,0 +1,415 @@
+{
+ "BOQ_and_Measurements_Contract_71": {
+  "sheets": {
+   "BOQ": {
+    "rows": 8,
+    "totals": {
+     "amount": 811000652.0,
+     "rate": 90573.0,
+     "quantity": 605525.78
+    },
+    "by_client": {}
+   },
+   "Measurements": {
+    "rows": 71,
+    "totals": {
+     "amount": 811000652.0,
+     "qty measured": 496428.28
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 3,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "BOQ_and_Measurements_Contract_72": {
+  "sheets": {
+   "BOQ": {
+    "rows": 7,
+    "totals": {
+     "amount": 675128619.0,
+     "rate": 24602.0,
+     "quantity": 675641.85
+    },
+    "by_client": {}
+   },
+   "Measurements": {
+    "rows": 45,
+    "totals": {
+     "amount": 675128619.0,
+     "qty measured": 775286.49
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 3,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "BOQ_and_Measurements_Contract_73": {
+  "sheets": {
+   "BOQ": {
+    "rows": 8,
+    "totals": {
+     "amount": 675752304.0,
+     "rate": 97329.0,
+     "quantity": 571196.54
+    },
+    "by_client": {}
+   },
+   "Measurements": {
+    "rows": 55,
+    "totals": {
+     "amount": 675752304.0,
+     "qty measured": 358326.01
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 3,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "BOQ_and_Measurements_Contract_74": {
+  "sheets": {
+   "BOQ": {
+    "rows": 9,
+    "totals": {
+     "amount": 974532497.0,
+     "rate": 95348.0,
+     "quantity": 1127136.56
+    },
+    "by_client": {}
+   },
+   "Measurements": {
+    "rows": 91,
+    "totals": {
+     "amount": 974532497.0,
+     "qty measured": 831639.96
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 3,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "BOQ_and_Measurements_Contract_75": {
+  "sheets": {
+   "BOQ": {
+    "rows": 10,
+    "totals": {
+     "amount": 1146388931.0,
+     "rate": 145452805.0,
+     "quantity": 805586.14
+    },
+    "by_client": {}
+   },
+   "Measurements": {
+    "rows": 93,
+    "totals": {
+     "amount": 1146388931.0,
+     "qty measured": 932368.18
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 3,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "BOQ_and_Measurements_Contract_79": {
+  "sheets": {
+   "BOQ": {
+    "rows": 7,
+    "totals": {
+     "amount": 701258992.0,
+     "rate": 24602.0,
+     "quantity": 606897.94
+    },
+    "by_client": {}
+   },
+   "Measurements": {
+    "rows": 58,
+    "totals": {
+     "amount": 701258992.0,
+     "qty measured": 1024278.08
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 3,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "Plant_and_Machinery_Register": {
+  "sheets": {
+   "Plant Register": {
+    "rows": 211,
+    "totals": {
+     "cost": 10910600000.0
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 2,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "Receivables_Ageing": {
+  "sheets": {
+   "AR Ageing": {
+    "rows": 519,
+    "totals": {
+     "invoiced": 17499999732.0,
+     "received": 14868182090.0,
+     "outstanding": 2631817642.0
+    },
+    "by_client": {
+     "National Special Projects Office": {
+      "count": 17,
+      "invoiced": 455941538.0,
+      "received": 318223721.0,
+      "outstanding": 137717817.0
+     },
+     "Tamil Nadu Municipal Corporation": {
+      "count": 5,
+      "invoiced": 141391470.0,
+      "received": 82007053.0,
+      "outstanding": 59384417.0
+     },
+     "Arunodaya Infrastructure": {
+      "count": 37,
+      "invoiced": 1186226960.0,
+      "received": 927367871.0,
+      "outstanding": 258859089.0
+     },
+     "Public Health Engineering Dept, Odisha": {
+      "count": 21,
+      "invoiced": 1031628164.0,
+      "received": 850084152.0,
+      "outstanding": 181544012.0
+     },
+     "Meridian Constructors & Co": {
+      "count": 37,
+      "invoiced": 1273088178.0,
+      "received": 1131836053.0,
+      "outstanding": 141252125.0
+     },
+     "National Expressway Development Authority": {
+      "count": 16,
+      "invoiced": 575394232.0,
+      "received": 452418179.0,
+      "outstanding": 122976053.0
+     },
+     "Trishakti Power Generation Corporation": {
+      "count": 43,
+      "invoiced": 1563423500.0,
+      "received": 1559915846.0,
+      "outstanding": 3507654.0
+     },
+     "Jal Nigam, Gujarat": {
+      "count": 35,
+      "invoiced": 1741452262.0,
+      "received": 1411441315.0,
+      "outstanding": 330010947.0
+     },
+     "Subarnarekha Valley Corporation": {
+      "count": 51,
+      "invoiced": 1405329804.0,
+      "received": 1097957926.0,
+      "outstanding": 307371878.0
+     },
+     "Lakshya Engineering & Construction": {
+      "count": 46,
+      "invoiced": 1730463418.0,
+      "received": 1425618023.0,
+      "outstanding": 304845395.0
+     },
+     "Suvarna Projects Limited": {
+      "count": 31,
+      "invoiced": 990290653.0,
+      "received": 916032953.0,
+      "outstanding": 74257700.0
+     },
+     "Mahanadi Steel Corporation": {
+      "count": 18,
+      "invoiced": 567334799.0,
+      "received": 505984876.0,
+      "outstanding": 61349923.0
+     },
+     "Public Health Engineering Dept, West Bengal": {
+      "count": 17,
+      "invoiced": 974532497.0,
+      "received": 890837358.0,
+      "outstanding": 83695139.0
+     },
+     "Irrigation & Waterways Dept, Govt of Uttar Pradesh": {
+      "count": 21,
+      "invoiced": 548609701.0,
+      "received": 543387527.0,
+      "outstanding": 5222174.0
+     },
+     "Central Works & Buildings Bureau": {
+      "count": 14,
+      "invoiced": 204680452.0,
+      "received": 187720223.0,
+      "outstanding": 16960229.0
+     },
+     "Peninsular Petroleum Corporation": {
+      "count": 28,
+      "invoiced": 794217920.0,
+      "received": 569275239.0,
+      "outstanding": 224942681.0
+     },
+     "Mega Infrastructure Authority": {
+      "count": 21,
+      "invoiced": 761283092.0,
+      "received": 607667471.0,
+      "outstanding": 153615621.0
+     },
+     "Maharashtra Municipal Corporation": {
+      "count": 6,
+      "invoiced": 120720312.0,
+      "received": 133999548.0,
+      "outstanding": -13279236.0
+     },
+     "Gujarat Municipal Corporation": {
+      "count": 3,
+      "invoiced": 70280310.0,
+      "received": 65009288.0,
+      "outstanding": 5271022.0
+     },
+     "Jal Nigam, Jharkhand": {
+      "count": 16,
+      "invoiced": 434765460.0,
+      "received": 397024546.0,
+      "outstanding": 37740914.0
+     },
+     "Public Works Department, Govt of Gujarat": {
+      "count": 15,
+      "invoiced": 454679301.0,
+      "received": 407050865.0,
+      "outstanding": 47628436.0
+     },
+     "Public Health Engineering Dept, Gujarat": {
+      "count": 4,
+      "invoiced": 62396808.0,
+      "received": 34630228.0,
+      "outstanding": 27766580.0
+     },
+     "Public Works Department, Govt of Tamil Nadu": {
+      "count": 5,
+      "invoiced": 7821275.0,
+      "received": 7813453.0,
+      "outstanding": 7822.0
+     },
+     "Irrigation & Waterways Dept, Govt of Rajasthan": {
+      "count": 3,
+      "invoiced": 56279874.0,
+      "received": 31235332.0,
+      "outstanding": 25044542.0
+     },
+     "Public Works Department, Govt of West Bengal": {
+      "count": 8,
+      "invoiced": 347767752.0,
+      "received": 313643044.0,
+      "outstanding": 34124708.0
+     }
+    }
+   },
+   "Notes": {
+    "rows": 2,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ },
+ "Trial_Balance_by_Year": {
+  "sheets": {
+   "TB 2019-20": {
+    "rows": 25,
+    "totals": {
+     "debit": 6984568251.0,
+     "credit": 6984568251.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "TB 2020-21": {
+    "rows": 27,
+    "totals": {
+     "debit": 7266923411.0,
+     "credit": 7266923411.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "TB 2021-22": {
+    "rows": 30,
+    "totals": {
+     "debit": 13850168485.0,
+     "credit": 13850168485.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "TB 2022-23": {
+    "rows": 31,
+    "totals": {
+     "debit": 17270799230.0,
+     "credit": 17270799230.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "TB 2023-24": {
+    "rows": 29,
+    "totals": {
+     "debit": 9811137933.0,
+     "credit": 9811137933.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "TB 2024-25": {
+    "rows": 29,
+    "totals": {
+     "debit": 9712443073.0,
+     "credit": 9712443073.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "TB 2025-26": {
+    "rows": 30,
+    "totals": {
+     "debit": 12769154899.0,
+     "credit": 12769154899.0,
+     "balance": 0.0
+    },
+    "by_client": {}
+   },
+   "Notes": {
+    "rows": 2,
+    "totals": {},
+    "by_client": {}
+   }
+  }
+ }
+}
