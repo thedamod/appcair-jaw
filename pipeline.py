@@ -1,3 +1,13 @@
+"""Extraction pipeline: 687 documents -> a serializable knowledge graph (KG).
+
+Stage 1 of the system. Parses 678 PDFs (certificates, reference letters,
+personnel records, CVs) with config-driven label/value scanning plus prose
+fallback regexes, merges the two certificate sides of each work by normalized
+work name, indexes clients and engineers, and reduces the 9 Excel workbooks to
+per-client financial facts. Everything is cached behind a corpus fingerprint
+so the KG is rebuilt only when the corpus actually changes.
+"""
+
 import hashlib
 import json
 import os
@@ -67,6 +77,8 @@ _FIN = CFG["financial"]
 
 
 def parse_money(s):
+    """Parse any Indian rendering of rupees ('INR 33.38 Cr', '3,338.00 Lakh',
+    '33,38,00,000', 'Rs. 5,00,000/-') into a lossless integer of rupees."""
     if not s:
         return None
     t = (s.replace("INR", " ").replace("Rs.", " ").replace("Rs ", " ")
@@ -95,6 +107,8 @@ def _dt(y, mo, d):
 
 
 def parse_date(text):
+    """Parse a date in any of the corpus's dialects (ISO, day-first, "d Mon yyyy",
+    "Mon d, yyyy") into a JSON-safe (year, month, day) tuple."""
     if not text:
         return None
     m = re.search(r"\b(20\d{2})[-/.](\d{1,2})[-/.](\d{1,2})\b", text)
@@ -123,6 +137,8 @@ def days_between(a, b):
 
 
 def client_canonical(raw):
+    """Normalize a client name: strip the trailing '(...)' suffix and collapse
+    whitespace so the same client is one key everywhere in the KG."""
     if not raw:
         return None
     n = _CLIENT_SUFFIX.sub("", raw.strip())
@@ -145,6 +161,9 @@ def state_of(work):
 
 
 def extract_table_pairs(text):
+    """Scan document text for (label, value) pairs in either corpus layout:
+    a label line followed by its value line, or an inline 'Label: value' line.
+    Position-independent on purpose - 62 issuers format certificates differently."""
     lines = text.split("\n")
     n = len(lines)
     pairs = []
@@ -215,6 +234,8 @@ _PARSERS = {
 
 
 def parse_doc(doc_type, text):
+    """Parse one document of a given type into a record: table pairs first,
+    prose fallback regexes second, client letterhead and grade last."""
     doc_cfg = _DOC_TYPES[doc_type]
     lines = [l for l in text.split("\n") if l.strip()]
     rec = {"work": extract_work_name(text)}
@@ -289,6 +310,13 @@ def _wkey(n):
 
 
 def build(verbose=True):
+    """Assemble the knowledge graph from the whole corpus.
+
+    Merge strategy: company completion certificates (155, carry the client)
+    seed each work keyed by normalized quoted work name; client completion
+    certificates (155) fill value/date/pm/grade onto the same keys; reference
+    letters (132) mark works as referenced and add the contractor role.
+    """
     works = {}
     cc_files = sorted(glob.glob(os.path.join(DOCS, "completion_certificate", "*.pdf")))
     ccc_files = sorted(glob.glob(os.path.join(DOCS, "company_completion_certificate", "*.pdf")))
@@ -400,6 +428,7 @@ def corpus_fingerprint():
 
 
 def ensure_kg(verbose=False):
+    """Return the KG, rebuilding from the corpus only if its fingerprint changed."""
     kg_path = os.path.join(CACHE, "kg.json")
     fp = corpus_fingerprint()
     if os.path.exists(kg_path):
@@ -423,6 +452,7 @@ def _col_index(header, name):
 
 
 def build_financial(verbose=True):
+    """Reduce the 9 workbooks to per-sheet totals and per-client column sums."""
     import openpyxl
     facts = {}
     for f in sorted(glob.glob(os.path.join(DOCS, "workbooks", "*.xlsx"))):

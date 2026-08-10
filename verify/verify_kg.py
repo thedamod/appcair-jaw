@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""Clean-room KG rebuild: a second, independently written parser that rebuilds
+the knowledge graph from the corpus and must match the pipeline's cached KG
+field-for-field with zero differences. Two parsers agreeing means the KG is
+not an artifact of one buggy regex.
+"""
 import fitz, glob, os, re, json, collections, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

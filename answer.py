@@ -1,3 +1,11 @@
+"""Question engine: plain-English question -> one number, over the pipeline's KG.
+
+Three steps, in order: (1) classify the question into an arithmetic "shape"
+(detect), (2) resolve the entities it names (client / engineer / work) against
+the knowledge graph, (3) compute the answer as a pure aggregation over the
+resolved key set. Deterministic: same question, same number, every time.
+"""
+
 import re, os, statistics
 from pipeline import ensure_kg, parse_date, days_between
 
@@ -81,6 +89,14 @@ _ALIASES = {
 
 
 def resolve_client(q):
+    """Resolve the client a question refers to -> (canonical_name, explicit?).
+
+    Cascade: longest exact substring match over known clients, then hand-built
+    aliases, then a category-based heuristic for ambiguous "Public Works
+    Department" clients, then abbreviations, then stopword-filtered token
+    containment. `explicit` is False for low-confidence tiers so callers can
+    prefer a work-derived client.
+    """
     ql = q.lower()
     ql = re.sub(r"\birr\s*&\s*waterways\b", "irrigation waterways", ql)
     ql = re.sub(r"\bneda\b", "national expressway development authority", ql)
@@ -122,6 +138,7 @@ def resolve_client(q):
 
 
 def resolve_engineer(q):
+    """Resolve an engineer's name from the question (full name, then unique first name)."""
     ql = q.lower()
     best, bestlen = None, 0
     for name in PEOPLE:
@@ -168,6 +185,11 @@ def _state_in(q):
 
 
 def resolve_work(q, eng=None):
+    """Resolve which work a question names -> normalized work key (or None).
+
+    Two modes: token-overlap matching against work names when no package number
+    is given, or direct Pkg-N lookup, disambiguated by state and engineer.
+    """
     pkgs = _pkgs_in(q)
     ql = q.lower()
     if not pkgs:
@@ -226,34 +248,6 @@ def client_works(client):
     return list(CLIENTS.get(client, set()))
 
 
-def anchor_client(q):
-    c, _ = resolve_client(q)
-    if c:
-        return c
-    wk = resolve_work(q)
-    if wk:
-        return client_of_work(wk)
-    return None
-
-
-def anchor_work_and_client(q):
-    wk = resolve_work(q)
-    c, explicit = resolve_client(q)
-    if not explicit and wk:
-        c = c or client_of_work(wk)
-    return wk, c
-
-
-def _target_keys(q):
-    name = resolve_engineer(q)
-    c, _ = resolve_client(q)
-    if c:
-        return client_works(c), "client"
-    if name:
-        return engineer_works(name), "engineer"
-    return [], None
-
-
 _WORD = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
          "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11,
          "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16,
@@ -263,6 +257,7 @@ _WORD = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
 
 
 def resolve_threshold(q):
+    """Parse a money threshold like 'INR 5 Cr' or 'twenty five crore' -> rupees int."""
     m = re.search(r"(?i)(?:INR|Rs\.?|\u20b9)?\s*([\d,]+)\s*(Cr|Lakh|crore|lac)\b", q)
     if m:
         v = int(m.group(1).replace(",", ""))
@@ -291,6 +286,12 @@ def _years(q):
 
 
 def detect(q):
+    """Classify a question into one of ~20 arithmetic shapes (ordered regex cascade).
+
+    Order matters: the most specific shapes (financial metrics, absence, day
+    spans) are tested before generic aggregates, and the catch-all is a plain
+    sum (hop_aggregate).
+    """
     ql = q.lower()
     if re.search(r"outstanding|remaining balance across all charged|total remaining balance", ql) and \
        not re.search(r"threshold|credential|secure|clear the", ql):
@@ -500,15 +501,6 @@ def answer_referenced_share(client):
     return round(n_ref / len(keys) * 100, 2)
 
 
-def answer_role_split(client):
-    tot = 0
-    for k in client_works(client):
-        role = (WORKS[k].get("role") or "prime").lower()
-        if role.startswith("prime") or role in ("", "none"):
-            tot += WORKS[k].get("value", 0)
-    return tot
-
-
 def answer_threshold(client, threshold):
     return sum(WORKS[k]["value"] for k in client_works(client)
                if WORKS[k].get("value") is not None and WORKS[k]["value"] >= threshold)
@@ -521,17 +513,6 @@ def answer_count(keys):
 def answer_extreme(keys, kind):
     vs = _vals(keys)
     return (max(vs) if kind == "max" else min(vs)) if vs else None
-
-
-def answer_category(keys, category):
-    cat = category.lower()
-    return sum(WORKS[k]["value"] for k in keys
-               if (WORKS[k].get("category") or "").lower() == cat and WORKS[k].get("value") is not None)
-
-
-def answer_year(keys, year):
-    keys = [k for k in keys if WORKS[k].get("completion_date") and str(WORKS[k]["completion_date"][0]) == year]
-    return keys
 
 
 def answer_mean_median(keys):
@@ -606,6 +587,11 @@ def answer_fin_metric(q, metric):
 
 
 def answer(q):
+    """Answer one question: shape -> entities -> keys -> aggregation.
+
+    If the question names a work but no client, the work's client is inherited
+    (the 'four documents minimum' chain: engineer -> work -> client -> portfolio).
+    """
     shape = detect(q)
     ql = q.lower()
     name = resolve_engineer(q)
@@ -633,8 +619,6 @@ def answer(q):
         return round(row["received"] / row["invoiced"] * 100, 2) if row and row.get("invoiced") else None
     if shape == "fin_assets":
         return answer_fin_metric(q, "assets")
-    if shape == "fin_trial":
-        return None
     if shape == "awarded_invoiced_gap":
         return answer_awarded_gap(client)
 
@@ -702,6 +686,7 @@ def answer(q):
 
 
 def answer_debug(q):
+    """One-question diagnostic: shape, resolved entities, threshold, and answer."""
     c, explicit = resolve_client(q)
     return {"shape": detect(q), "client": c, "client_explicit": explicit,
             "engineer": resolve_engineer(q),

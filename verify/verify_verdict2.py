@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+"""Independent recomputation of all 333 answers.
+
+Rebuilds the KG via verify_kg.py's clean-room parser, re-reads the AR ageing
+workbook directly with openpyxl, re-implements the answer engine from scratch,
+and compares against submission_full.csv. Output: verdicts per question
+(AGREE / DISAGREE / UNRESOLVED / CSV_WRONG_SHAPE) plus an overall agreement
+count. The 3 UNRESOLVED questions are under-determined from their text alone.
+"""
 import json, re, os, csv, statistics, datetime, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))

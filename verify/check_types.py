@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""Type gate: every answer in the submission CSV must be consistent with its
+declared answer_type (percent in [0,100], days/count plausible integers,
+money non-negative unless the question signals a signed mean-median).
+"""
 import argparse, csv, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))

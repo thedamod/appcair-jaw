@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+"""Regression harness: the five gates that make the submission trustworthy.
+
+1. run.py on the official sample set, scored by the real evaluator (21/21)
+2. clean-room KG rebuild (verify_kg.py) matches the pipeline KG field-for-field
+3. independent recomputation (verify_verdict2.py) agrees with the submission
+   on >=330/333 with zero outright wrong answers
+4. type gate (check_types.py) on the outgoing CSV
+Exit 0 only if every gate passes.
+"""
 import os, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))

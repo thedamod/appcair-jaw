@@ -1,3 +1,9 @@
+"""Corpus audit tool: measures how completely the config maps every label seen
+in the corpus. Reports unmapped labels per document type and can emit config
+fragments (--emit-config) for labels it can guess - the loop used to reach
+full extraction coverage.
+"""
+
 import argparse
 import collections
 import glob

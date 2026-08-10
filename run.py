@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""Runner: questions JSON -> submission CSV.
+
+Reads a question set (the official format: a dict with a "questions" list of
+{qid, question} or a bare list), answers every question through
+answer.answer(), and writes the question_id,answer CSV the evaluator expects.
+"""
 import argparse, csv, json, os, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -7,6 +13,7 @@ import answer
 
 
 def main():
+    """CLI entry point: --questions in, --out CSV out, --debug prints each row."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--questions", required=True)
     ap.add_argument("--out", required=True)
