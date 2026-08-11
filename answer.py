@@ -46,15 +46,6 @@ _CATS = ["water treatment", "sewerage drainage", "water supply", "roads maintena
          "roads highways", "bridges flyovers", "industrial epc", "large bridges",
          "small buildings", "expressways", "irrigation", "tunnels", "buildings"]
 
-# One-shot candidate for the four person-only mean/median prompts. The
-# prompts omit a project/client, so this is intentionally isolated for the
-# fixed-submission experiment and can be reverted from one commit.
-_SPECULATIVE_MEAN_MEDIAN_CLIENTS = {
-    # Isolated candidate for the first ambiguity test; keep the other
-    # under-specified engineer prompts on the known baseline behavior.
-    "imran joshi": "Subarnarekha Valley Corporation",
-}
-
 _ALIASES = {
     "up irrigation": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
     "gujarat pw": "Public Works Department, Govt of Gujarat",
@@ -661,8 +652,6 @@ def answer(q):
     client, explicit = resolve_client(q)
     if not explicit and wk:
         client = client_of_work(wk)
-    if shape == "mean_median" and not client and not wk and name:
-        client = _SPECULATIVE_MEAN_MEDIAN_CLIENTS.get(name.lower())
     keys = client_works(client) if client else (engineer_works(name) if name else None)
 
     if shape == "fin_outstanding":
