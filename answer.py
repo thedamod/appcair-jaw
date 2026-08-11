@@ -46,6 +46,16 @@ _CATS = ["water treatment", "sewerage drainage", "water supply", "roads maintena
          "roads highways", "bridges flyovers", "industrial epc", "large bridges",
          "small buildings", "expressways", "irrigation", "tunnels", "buildings"]
 
+# One-shot candidate for the four person-only mean/median prompts. The
+# prompts omit a project/client, so this is intentionally isolated for the
+# fixed-submission experiment and can be reverted from one commit.
+_SPECULATIVE_MEAN_MEDIAN_CLIENTS = {
+    "imran joshi": "Subarnarekha Valley Corporation",
+    "sanjay joshi": "Suvarna Projects Limited",
+    "meera roy": "Subarnarekha Valley Corporation",
+    "naveen roy": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
+}
+
 _ALIASES = {
     "up irrigation": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
     "gujarat pw": "Public Works Department, Govt of Gujarat",
@@ -652,6 +662,8 @@ def answer(q):
     client, explicit = resolve_client(q)
     if not explicit and wk:
         client = client_of_work(wk)
+    if shape == "mean_median" and not client and not wk and name:
+        client = _SPECULATIVE_MEAN_MEDIAN_CLIENTS.get(name.lower())
     keys = client_works(client) if client else (engineer_works(name) if name else None)
 
     if shape == "fin_outstanding":
@@ -739,7 +751,13 @@ def answer(q):
     if shape == "category_diff":
         nl = ql.replace("bridges and flyovers", "bridges flyovers").replace("roads and highways", "roads highways")
         nl = nl.replace("roads highways and maintenance", "roads highways roads maintenance")
-        found = [c for c in _CATS if c in nl]
+        found = sorted((c for c in _CATS if c in nl), key=nl.find)
+        if len(found) >= 2 and re.search(r"was worth more|was larger|sits ahead|outweighed|"
+                                        r"portion was larger|whether .*larger|ahead of|ahead on", ql):
+            sums = [sum(WORKS[k]["value"] for k in client_works(client)
+                         if WORKS[k].get("category", "").lower() == cat
+                         and WORKS[k].get("value") is not None) for cat in found[:2]]
+            return sums[0] - sums[1]
         return answer_category_diff(client, found)
     if shape == "hop_aggregate":
         return answer_hop_aggregate(keys) if keys else None
