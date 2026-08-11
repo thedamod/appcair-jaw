@@ -50,6 +50,7 @@ _CATS = ["water treatment", "sewerage drainage", "water supply", "roads maintena
 # prompts omit a project/client, so this is intentionally isolated for the
 # fixed-submission experiment and can be reverted from one commit.
 _SPECULATIVE_MEAN_MEDIAN_CLIENTS = {
+    "imran joshi": "Subarnarekha Valley Corporation",
     "sanjay joshi": "Suvarna Projects Limited",
     "meera roy": "Subarnarekha Valley Corporation",
     "naveen roy": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
