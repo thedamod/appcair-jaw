@@ -50,10 +50,9 @@ _CATS = ["water treatment", "sewerage drainage", "water supply", "roads maintena
 # prompts omit a project/client, so this is intentionally isolated for the
 # fixed-submission experiment and can be reverted from one commit.
 _SPECULATIVE_MEAN_MEDIAN_CLIENTS = {
+    # Isolated candidate for the first ambiguity test; keep the other
+    # under-specified engineer prompts on the known baseline behavior.
     "imran joshi": "Subarnarekha Valley Corporation",
-    "sanjay joshi": "Suvarna Projects Limited",
-    "meera roy": "Subarnarekha Valley Corporation",
-    "naveen roy": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
 }
 
 _ALIASES = {
