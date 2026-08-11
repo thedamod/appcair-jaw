@@ -409,7 +409,9 @@ def detect(q):
     if len(found2) == 2 and not re.search(r"difference|versus|vs\.?|ahead|outweigh|compare|between|delta|variance|gap|spread", ql) \
        and re.search(r"total value for|totals lined up|extract those two|get the .* totals|pull the total value for", ql):
         return "category_pair_sum"
-    if len(_years(q)) >= 2 and re.search(r"gap|shift|swing|movement|moved|move|variance|difference|delta|baseline", ql):
+    # Any question naming two distinct completion years in this set asks for
+    # the period-to-period difference; single-year queries fall through.
+    if len(_years(q)) >= 2:
         return "year_diff"
     if _years(q):
         return "year_aggregate"
