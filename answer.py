@@ -619,14 +619,14 @@ def answer_fin_metric(q, metric, resolved_client=None):
         row = ageing.get("by_client", {}).get(client)
         if row and metric in row:
             value = int(round(row[metric]))
-            return max(0, value) if metric == "outstanding" else value
+            return value
     if metric in ("invoiced", "outstanding"):
         ar = _ar_client_from_text(q)
         if ar:
             row = ageing.get("by_client", {}).get(ar)
             if row and metric in row:
                 value = int(round(row[metric]))
-                return max(0, value) if metric == "outstanding" else value
+                return value
     pr = fin.get("Plant_and_Machinery_Register", {}).get("sheets", {})
     if metric == "assets":
         tot = 0
