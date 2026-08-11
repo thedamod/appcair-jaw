@@ -204,7 +204,7 @@ def resolve_fields(pairs, doc_cfg):
     return out
 
 
-_WORK_QUOTED = re.compile(r'["“”]\s*([^"“”]{3,}?(?:—|–|-)\s*[A-Za-z ]+?\s*Pkg-?\d+[^"“”]*?)\s*["“”]')
+_WORK_QUOTED = re.compile(r'["“”]\s*([^"“”]{3,}?(?:—|–|-)\s*[A-Za-z]+(?:\s+[A-Za-z]+)*\s*Pkg-?\d+[^"“”]*?)\s*["“”]')
 
 
 def extract_work_name(text):
@@ -365,7 +365,9 @@ def build(verbose=True):
         if rec.get("work") and _wkey(rec["work"]) in works:
             hit = _wkey(rec["work"])
         else:
-            low = txt.lower()
+            # PDF extraction may wrap a state name across lines; normalize
+            # whitespace before matching the canonical work key.
+            low = re.sub(r"\s+", " ", txt).lower()
             for k in known:
                 if k in low:
                     hit = k

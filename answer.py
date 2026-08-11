@@ -726,8 +726,9 @@ def answer(q):
         yrs = _years(q)
         if not yrs or not client:
             return None
+        years = set(yrs)
         yk = [k for k in client_works(client) if WORKS[k].get("completion_date")
-              and WORKS[k]["completion_date"][0] == yrs[0]]
+              and WORKS[k]["completion_date"][0] in years]
         if re.search(r"value|sum|total|contract amounts", ql):
             return sum(_vals(yk))
         return len(yk)
