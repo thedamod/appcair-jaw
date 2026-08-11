@@ -9,7 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SOL = ROOT
 
-_SIGNED_HINTS = re.compile(r"negative if (?:the )?(?:mean|average)", re.I)
+_SIGNED_HINTS = re.compile(r"negative if (?:the )?(?:mean|average|avg)", re.I)
 
 
 def main():

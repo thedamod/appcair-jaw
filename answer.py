@@ -258,11 +258,11 @@ _WORD = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
 
 def resolve_threshold(q):
     """Parse a money threshold like 'INR 5 Cr' or 'twenty five crore' -> rupees int."""
-    m = re.search(r"(?i)(?:INR|Rs\.?|\u20b9)?\s*([\d,]+)\s*(Cr|Lakh|crore|lac)\b", q)
+    m = re.search(r"(?i)(?:INR|Rs\.?|\u20b9)?\s*([\d,]+(?:\.\d+)?)\s*(Cr|Lakh|crore|lac)\b", q)
     if m:
-        v = int(m.group(1).replace(",", ""))
+        v = float(m.group(1).replace(",", ""))
         mult = 10_000_000 if m.group(2).lower() in ("cr", "crore") else 100_000
-        return v * mult
+        return int(round(v * mult))
     m = re.search(r"(?i)((?:[a-z]+[\s-]*){1,7})(?:crore|crs?|lakh|lacs?)\b", q)
     if m:
         words = re.findall(r"[a-z]+", m.group(1))
@@ -276,12 +276,17 @@ def resolve_threshold(q):
 
 
 def _years(q):
-    out = []
+    # Preserve order but remove repeated mentions of the same year (questions
+    # often restate a year while describing the comparison).
+    out, seen = [], set()
     for m in re.finditer(r"\b(20\d{2})\b", q):
         pre = q[max(0, m.start() - 4):m.start()]
         if re.search(r"PMI-2?$|PMI$", pre):
             continue
-        out.append(int(m.group(1)))
+        year = int(m.group(1))
+        if year not in seen:
+            out.append(year)
+            seen.add(year)
     return out
 
 
@@ -293,9 +298,22 @@ def detect(q):
     sum (hop_aggregate).
     """
     ql = q.lower()
-    if re.search(r"outstanding|remaining balance across all charged|total remaining balance", ql) and \
+    if re.search(r"outstanding|remaining balance across all charged|total remaining balance|"
+                 r"still owe|still owed|still due|amount .*due|net balance|balance .*"
+                 r"(?:still|remaining|due|owed)|remain(?:s|ing)? (?:unpaid|on|due)|"
+                 r"unpaid|pending balance|pending amount|still pending|currently due|"
+                 r"deduction .*cleared|deducting .*cleared|after .*cleared|cleared so far|"
+                 r"adjusted balance|billed amounts? .*pending|balance when .*invoice", ql) and \
        not re.search(r"threshold|credential|secure|clear the", ql):
         return "fin_outstanding"
+    if re.search(r"gap between .{0,60}(?:award|billed|invoice)|"
+                 r"awarded value .*versus|award(?:ed)? .*shortfall|shortfall|unbilled|"
+                 r"missing amount|variance between .{0,40}(?:award|scope|commit)|"
+                 r"still sitting above|delta between secured|gap between the total value of work awarded|"
+                 r"gap between total award value|awarded works.*gap|gap between.*award.*billed|"
+                 r"gap between .{0,80}(?:award|billed|invoice|assigned|committed|sanctioned|claimed)|"
+                 r"amount (?:after|once) .{0,40}(?:cross-check(?:ing)?|checking|reconcil(?:e|ing)) .{0,30}(?:invoice|claim|billed)", ql):
+        return "awarded_invoiced_gap"
     if re.search(r"percentage out of 100|collection figure|collected aligns|percentage.*collected|"
                  r"% has been collected|collection percentage|collection rate|billing versus collection|"
                  r"percentage.*against the billing|collection number|collection %|% out of 100|"
@@ -305,10 +323,6 @@ def detect(q):
         return "fin_invoiced"
     if re.search(r"plant and machinery|asset register|equipment register|acquisition cost", ql):
         return "fin_assets"
-    if re.search(r"gap between the total value of work awarded and the amount|still sitting above what we've|"
-                 r"delta between secured work and submitted claims|gap between total award value|"
-                 r"awarded works.*gap|gap between.*award.*billed", ql):
-        return "awarded_invoiced_gap"
     if re.search(r"no (?:client )?reference letter|lack a reference|without a reference|unreferenced|"
                  r"lack a client reference", ql):
         return "absence"
@@ -322,7 +336,7 @@ def detect(q):
                  r"how many (?:different )?categories|separate work categories|how many work categories|"
                  r"count of separate work categories", ql):
         return "distinct_count"
-    if re.search(r"exclud(?:ing|es?)|dropping|after .*excluded|"
+    if re.search(r"exclud(?:ing|es?)|dropping|after .*excluded|set aside|stripped out|remov(?:e|ed|ing)|"
                  r"minus the (?:water treatment|buildings|bridges flyovers|roads highways|expressways|"
                  r"tunnels|irrigation|sewerage drainage|industrial epc|water supply|roads maintenance|"
                  r"large bridges|small buildings) (?:side|division|part)", ql):
@@ -334,7 +348,8 @@ def detect(q):
                  r"backed by a client reference|client reference on file", ql):
         return "referenced_share"
     if re.search(r"reach (?:our )?credential target|target of (?:INR|Rs|\u20b9)|bar (?:INR|Rs)|"
-                 r"additional work must we secure|how much more value", ql):
+                 r"additional work must we secure|how much more value|how much more .*to hit|"
+                 r"bring in .*to hit|clear the .*credential threshold", ql):
         return "gap_to_threshold"
     if re.search(r"highest-value completed assignment and the (?:next|subsequent)|difference between our highest|"
                  r"top finished contract there beats the second|largest completed work exceed the second|"
@@ -342,7 +357,11 @@ def detect(q):
                  r"how much our largest (?:work|contract|project) exceeds the second|"
                  r"difference between our biggest and next|largest one and the second largest|"
                  r"beats the second|our largest work exceeds|largest.*second largest|"
-                 r"largest finished contract there beats", ql):
+                 r"largest finished contract there beats|difference in value between our largest|"
+                 r"difference .*largest .*second-largest|largest (?:one|completed (?:work|project|contract)) exceeds the second|"
+                 r"highest-value completed assignment.{0,40}exceeds the (?:next|second)|"
+                 r"(?:biggest|largest|top) finished contract.{0,40}(?:exceeds|beats) the (?:next|second)|"
+                 r"exceeds the second one|beats the one just behind|surplus value separating", ql):
         return "rank_value"
     if re.search(r"graded (excellent|very good|good|satisfactory)|marked (excellent|very good|good|satisfactory)", ql):
         return "doc_filtered_aggregate"
@@ -351,18 +370,32 @@ def detect(q):
                  r"average contract value.*than the median|mean scale|rupee difference between the mean|"
                  r"mean against the median|difference between the average and median|"
                  r"difference between the mean and median|average and median|mean and median contract|"
-                 r"median contract values|average vs median|mean-median gap|avg minus median|average minus median", ql):
+                 r"median contract values|average vs median|mean-median gap|avg minus median|average minus median|"
+                 r"gap between (?:the )?(?:avg|average) and (?:the )?median", ql):
         return "mean_median"
     if re.search(r"\b(20\d{2})\b\s*vs\.?\s*\b(20\d{2})\b|difference in completed work value between "
                  r"(\d{4}) and (\d{4})|difference .*between (\d{4}) and (\d{4})|"
-                 r"delta on completed work value|net difference in the value of work completed", ql):
+                 r"delta on completed work value|net difference in the value of work completed|"
+                 r"(?:moved|movement|shift|swing|variance|period-over-period) .*between .*20\d{2}|"
+                 r"both\s+20\d{2}\s+and\s+20\d{2}.*(?:shift|movement|difference|variance)|"
+                 r"\b20\d{2}\b.{0,20}\b(?:and|to|through|versus)\b.{0,20}\b20\d{2}\b.{0,120}"
+                 r"(?:variance|shift|swing|movement|moved|move|gap|difference|compare|absolute|amount between)|"
+                 r"\b(?:gap|shift|swing|movement|moved|variance|absolute difference)\b.{0,80}"
+                 r"\b(?:between|from|through|vs\.?)\b.{0,20}\b20\d{2}\b.{0,25}\b(?:and|to|through|versus)\b.{0,25}\b20\d{2}\b|"
+                 r"\b20\d{2}\b\s*versus\s*\b20\d{2}\b", ql):
         return "year_diff"
-    found = [c for c in _CATS if c in ql.replace("bridges and flyovers", "bridges flyovers")
-             .replace("roads and highways", "roads highways")]
-    if len(found) >= 2 and re.search(r"difference|delta|spread|subtract|versus|vs\.?|outweighed|gap", ql):
+    _category_text = ql.replace("bridges and flyovers", "bridges flyovers")
+    _category_text = _category_text.replace("roads and highways", "roads highways")
+    _category_text = _category_text.replace("roads highways and maintenance", "roads highways roads maintenance")
+    found = [c for c in _CATS if c in _category_text]
+    if len(found) >= 2 and re.search(r"difference|delta|spread|subtract|versus|vs\.?|outweighed|gap|"
+                                     r"variance|\bdiff\b|net value|compare|larger than", ql):
         return "category_diff"
     if re.search(r"crossing the|hitting the|above (?:INR|Rs|\u20b9)|cross(?:ing)? (?:the )?(?:INR|Rs|\u20b9)|"
-                 r"exceeding|hitting (?:[a-z]+ )?crore|hitting (?:INR|Rs|\u20b9)|or more", ql):
+                 r"exceeding|hitting (?:[a-z]+ )?crore|hitting (?:INR|Rs|\u20b9)|or more|"
+                 r"meet(?:s|ing)? or exceed|clear(?:s|ing)? the .*threshold|at or over|"
+                 r"entries meeting|meeting .*threshold|(?:crore|cr) (?:mark|threshold|cutoff|limit)|"
+                 r"or higher|(?:crore|cr) (?:rupee|rupees )?(?:mark|threshold|cutoff|limit)", ql):
         return "threshold_aggregate"
     if re.search(r"completed after|wrapped up after|after (?:her|his|that|its)", ql):
         return "temporal_chain"
@@ -370,7 +403,7 @@ def detect(q):
         return "max_value"
     if re.search(r"smallest (?:work|project)|lowest value", ql):
         return "min_value"
-    if re.search(r"average|mean|avg ", ql):
+    if re.search(r"average|mean|avg |typical (?:project |job )?scale", ql):
         return "avg_work_size"
     if _years(q):
         return "year_aggregate"
@@ -446,6 +479,7 @@ def _category_aliases(text):
                         ("water treatment", "water treatment"),
                         ("water supply", "water supply"),
                         ("industrial epc", "industrial epc"),
+                        ("large bridges", "large bridges"),
                         ("sewerage drainage", "sewerage drainage"),
                         ("roads highways", "roads highways"),
                         ("bridges flyovers", "bridges flyovers"),
@@ -468,9 +502,13 @@ def _exclusion_category(ql):
         alias = _category_aliases(seg)
         if alias:
             return alias
-    i = re.search(r"exclud(?:ing|es?)|dropping|minus", ql)
+    i = re.search(r"exclud(?:ing|es?)|dropping|minus|set aside|stripped out|remov(?:e|ed|ing)", ql)
     if not i:
         return None
+    if re.search(r"set aside|stripped out", ql):
+        alias = _category_aliases(ql)
+        if alias:
+            return alias
     tail = re.sub(r"^\W+", "", ql[i.end():])
     cats = sorted({(w.get("category") or "").lower() for w in WORKS.values() if w.get("category")},
                   key=len, reverse=True)
@@ -485,7 +523,8 @@ def _exclusion_category(ql):
 
 
 def answer_gap(client, threshold):
-    return threshold - sum(_vals(client_works(client)))
+    # "How much more must we secure" cannot be negative once the target is met.
+    return max(0, threshold - sum(_vals(client_works(client))))
 
 
 def answer_rank(client):
@@ -548,7 +587,7 @@ def answer_category_diff(client, cats):
 def answer_awarded_gap(client):
     fin = load_financial()
     row = fin.get("Receivables_Ageing", {}).get("sheets", {}).get("AR Ageing", {}).get("by_client", {}).get(client)
-    return sum(_vals(client_works(client))) - int(round(row["invoiced"])) if row and client else None
+    return abs(sum(_vals(client_works(client))) - int(round(row["invoiced"]))) if row and client else None
 
 
 def _ar_client_from_text(q):
@@ -562,20 +601,24 @@ def _ar_client_from_text(q):
     return best
 
 
-def answer_fin_metric(q, metric):
+def answer_fin_metric(q, metric, resolved_client=None):
     fin = load_financial()
-    client, _ = resolve_client(q)
+    client = resolved_client
+    if not client:
+        client, _ = resolve_client(q)
     ageing = fin.get("Receivables_Ageing", {}).get("sheets", {}).get("AR Ageing", {})
     if metric in ("invoiced", "received", "outstanding") and client:
         row = ageing.get("by_client", {}).get(client)
         if row and metric in row:
-            return int(round(row[metric]))
+            value = int(round(row[metric]))
+            return max(0, value) if metric == "outstanding" else value
     if metric in ("invoiced", "outstanding"):
         ar = _ar_client_from_text(q)
         if ar:
             row = ageing.get("by_client", {}).get(ar)
             if row and metric in row:
-                return int(round(row[metric]))
+                value = int(round(row[metric]))
+                return max(0, value) if metric == "outstanding" else value
     pr = fin.get("Plant_and_Machinery_Register", {}).get("sheets", {})
     if metric == "assets":
         tot = 0
@@ -602,7 +645,7 @@ def answer(q):
     keys = client_works(client) if client else (engineer_works(name) if name else None)
 
     if shape == "fin_outstanding":
-        return answer_fin_metric(q, "outstanding")
+        return answer_fin_metric(q, "outstanding", client)
     if shape == "fin_invoiced":
         if re.search(r"\bpercentage\b|%|collected|collection (?:figure|rate|percentage)|collected aligns", ql):
             fin = load_financial()
@@ -610,7 +653,7 @@ def answer(q):
             if not row:
                 row = fin.get("Receivables_Ageing", {}).get("sheets", {}).get("AR Ageing", {}).get("by_client", {}).get(_ar_client_from_text(q))
             return round(row["received"] / row["invoiced"] * 100, 2) if row and row.get("invoiced") else None
-        return answer_fin_metric(q, "invoiced")
+        return answer_fin_metric(q, "invoiced", client)
     if shape == "fin_collection_share":
         fin = load_financial()
         row = fin.get("Receivables_Ageing", {}).get("sheets", {}).get("AR Ageing", {}).get("by_client", {}).get(client)
@@ -648,9 +691,11 @@ def answer(q):
         return answer_doc_filtered(client, gm.group(1)) if gm else None
     if shape == "mean_median":
         if client:
-            return answer_mean_median(client_works(client))
+            value = answer_mean_median(client_works(client))
+            return value if re.search(r"negative if", ql) else abs(value)
         if name:
-            return answer_mean_median(engineer_works(name))
+            value = answer_mean_median(engineer_works(name))
+            return value if re.search(r"negative if", ql) else abs(value)
         return None
     if shape == "avg_work_size":
         return answer_avg(keys) if keys else None
@@ -676,6 +721,7 @@ def answer(q):
         return len(yk)
     if shape == "category_diff":
         nl = ql.replace("bridges and flyovers", "bridges flyovers").replace("roads and highways", "roads highways")
+        nl = nl.replace("roads highways and maintenance", "roads highways roads maintenance")
         found = [c for c in _CATS if c in nl]
         return answer_category_diff(client, found)
     if shape == "hop_aggregate":
