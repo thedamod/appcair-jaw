@@ -232,7 +232,7 @@ def main():
             if k in works:
                 hit = k
         if hit is None:
-            low = t.lower()
+            low = re.sub(r"\s+", " ", t).lower()
             for k in works:
                 if k in low:
                     hit = k
