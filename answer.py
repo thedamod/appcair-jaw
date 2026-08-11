@@ -336,7 +336,7 @@ def detect(q):
                  r"how many (?:different )?categories|separate work categories|how many work categories|"
                  r"count of separate work categories", ql):
         return "distinct_count"
-    if re.search(r"exclud(?:ing|es?)|dropping|after .*excluded|set aside|stripped out|remov(?:e|ed|ing)|"
+    if re.search(r"exclud(?:ing|es?)|dropping|after .*excluded|set aside|stripped out|remov(?:e|ed|ing)|filter(?:ing)? out|"
                  r"minus the (?:water treatment|buildings|bridges flyovers|roads highways|expressways|"
                  r"tunnels|irrigation|sewerage drainage|industrial epc|water supply|roads maintenance|"
                  r"large bridges|small buildings) (?:side|division|part)", ql):
@@ -367,7 +367,7 @@ def detect(q):
         return "doc_filtered_aggregate"
     if re.search(r"difference between the mean and the median|mean-median|mean and median gap|"
                  r"mean and the median|how much larger the average.*than the median|"
-                 r"average contract value.*than the median|mean scale|rupee difference between the mean|"
+                 r"average contract value.*than the median|rupee difference between the mean|"
                  r"mean against the median|difference between the average and median|"
                  r"difference between the mean and median|average and median|mean and median contract|"
                  r"median contract values|average vs median|mean-median gap|avg minus median|average minus median|"
@@ -405,6 +405,12 @@ def detect(q):
         return "min_value"
     if re.search(r"average|mean|avg |typical (?:project |job )?scale", ql):
         return "avg_work_size"
+    found2 = [c for c in _CATS if c in _category_text]
+    if len(found2) == 2 and not re.search(r"difference|versus|vs\.?|ahead|outweigh|compare|between|delta|variance|gap|spread", ql) \
+       and re.search(r"total value for|totals lined up|extract those two|get the .* totals|pull the total value for", ql):
+        return "category_pair_sum"
+    if len(_years(q)) >= 2 and re.search(r"gap|shift|swing|movement|moved|move|variance|difference|delta|baseline", ql):
+        return "year_diff"
     if _years(q):
         return "year_aggregate"
     if re.search(r"combined value|total value|sum of|aggregate|total amount|total of|full tally|"
@@ -502,7 +508,7 @@ def _exclusion_category(ql):
         alias = _category_aliases(seg)
         if alias:
             return alias
-    i = re.search(r"exclud(?:ing|es?)|dropping|minus|set aside|stripped out|remov(?:e|ed|ing)", ql)
+    i = re.search(r"exclud(?:ing|es?)|dropping|minus|set aside|stripped out|remov(?:e|ed|ing)|filter(?:ing)? out", ql)
     if not i:
         return None
     if re.search(r"set aside|stripped out", ql):
@@ -699,6 +705,12 @@ def answer(q):
         return None
     if shape == "avg_work_size":
         return answer_avg(keys) if keys else None
+    if shape == "category_pair_sum":
+        nl = ql.replace("bridges and flyovers", "bridges flyovers").replace("roads and highways", "roads highways")
+        nl = nl.replace("roads highways and maintenance", "roads highways roads maintenance")
+        cats = [c for c in _CATS if c in nl]
+        return sum(WORKS[k]["value"] for k in (client_works(client) if client else [])
+                   if WORKS[k].get("value") is not None and WORKS[k].get("category", "").lower() in cats[:2])
     if shape == "threshold_aggregate":
         th = resolve_threshold(q)
         return answer_threshold(client, th) if (th is not None and client) else None
