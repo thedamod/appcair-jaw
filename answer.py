@@ -406,6 +406,8 @@ def detect(q):
     if re.search(r"average|mean|avg |typical (?:project |job )?scale", ql):
         return "avg_work_size"
     found2 = [c for c in _CATS if c in _category_text]
+    if len(found2) == 2 and re.search(r"run the math myself|figure out the difference myself|work out the difference myself", ql):
+        return "category_diff"
     if len(found2) == 2 and not re.search(r"difference|versus|vs\.?|ahead|outweigh|compare|between|delta|variance|gap|spread", ql) \
        and re.search(r"total value for|totals lined up|extract those two|get the .* totals|pull the total value for", ql):
         return "category_pair_sum"
