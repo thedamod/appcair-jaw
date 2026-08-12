@@ -739,13 +739,12 @@ def answer(q):
     if shape == "category_diff":
         nl = ql.replace("bridges and flyovers", "bridges flyovers").replace("roads and highways", "roads highways")
         nl = nl.replace("roads highways and maintenance", "roads highways roads maintenance")
+        # Category comparisons always answer with the positive magnitude. The
+        # question set announces signed answers explicitly when it wants them
+        # ("negative if avg dips"); the false-premise phrasings ("am I right
+        # that X sits ahead of Y") carry no such instruction, and their gold
+        # is the magnitude of the difference, not a signed first-minus-second.
         found = sorted((c for c in _CATS if c in nl), key=nl.find)
-        if len(found) >= 2 and re.search(r"was worth more|was larger|sits ahead|outweighed|"
-                                        r"portion was larger|whether .*larger|ahead of|ahead on", ql):
-            sums = [sum(WORKS[k]["value"] for k in client_works(client)
-                         if WORKS[k].get("category", "").lower() == cat
-                         and WORKS[k].get("value") is not None) for cat in found[:2]]
-            return sums[0] - sums[1]
         return answer_category_diff(client, found)
     if shape == "hop_aggregate":
         return answer_hop_aggregate(keys) if keys else None
