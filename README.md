@@ -137,3 +137,4 @@ instead of guessing. |
   and make the full 333-question submission regenerate in ~0.3 s.
 - No secrets, no network calls, no model weights — just `pip install
   -r requirements.txt` and the dataset clone.
+
