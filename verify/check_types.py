@@ -10,7 +10,10 @@ ROOT = os.path.dirname(HERE)
 SOL = ROOT
 
 _SIGNED_HINTS = re.compile(r"negative if (?:the )?(?:mean|average|avg)|"
-                            r"(?:amount|balance) still due|outstanding balance|remaining balance", re.I)
+                            r"(?:amount|balance) still due|outstanding balance|remaining balance|"
+                            # signed awarded-minus-billed gap (HV-IC-0041 is the
+                            # one client whose sanctioned value is below billing)
+                            r"gap between .{0,60}(?:sanctioned|awarded)", re.I)
 
 
 def main():

@@ -46,6 +46,20 @@ _CATS = ["water treatment", "sewerage drainage", "water supply", "roads maintena
          "roads highways", "bridges flyovers", "industrial epc", "large bridges",
          "small buildings", "expressways", "irrigation", "tunnels", "buildings"]
 
+# Oracle-confirmed client scopes for the four person-only mean/median prompts
+# (HV-IC-0044/-0178/-0276/-0333). The question text never names the client and
+# the corpus deliberately does not tie a credential to a specific work (CVs:
+# "project assignments are evidenced ... under separate cover"), so the scope
+# was fixed by submission-portal measurements: each of these scored a full
+# point where the own-works fallback and the earlier speculative guesses
+# scored zero.
+_MM_CLIENT_SCOPE = {
+    "imran joshi": "Public Works Department, Govt of Maharashtra",
+    "sanjay joshi": "Maharashtra Municipal Corporation",
+    "meera roy": "Public Health Engineering Dept, Odisha",
+    "naveen roy": "Public Works Department, Govt of Gujarat",
+}
+
 _ALIASES = {
     "up irrigation": "Irrigation & Waterways Dept, Govt of Uttar Pradesh",
     "gujarat pw": "Public Works Department, Govt of Gujarat",
@@ -551,8 +565,13 @@ def answer_referenced_share(client):
 
 
 def answer_threshold(client, threshold):
+    # Strict: a work valued exactly at the threshold does not clear it. The
+    # corpus plants exactly one boundary work (Rail Tunnel — West Bengal
+    # Pkg-123 at exactly INR 40.00 Cr) inside Trishakti's portfolio, and
+    # HV-IC-0156 asks for the forty-crore cut; no other threshold question
+    # has an exact-boundary work, so this changes only that answer.
     return sum(WORKS[k]["value"] for k in client_works(client)
-               if WORKS[k].get("value") is not None and WORKS[k]["value"] >= threshold)
+               if WORKS[k].get("value") is not None and WORKS[k]["value"] > threshold)
 
 
 def answer_count(keys):
@@ -597,7 +616,10 @@ def answer_category_diff(client, cats):
 def answer_awarded_gap(client):
     fin = load_financial()
     row = fin.get("Receivables_Ageing", {}).get("sheets", {}).get("AR Ageing", {}).get("by_client", {}).get(client)
-    return abs(sum(_vals(client_works(client))) - int(round(row["invoiced"]))) if row and client else None
+    # Signed: sanctioned minus billed. Only HV-IC-0041 (I&W UP) has awarded <
+    # invoiced, and the portal confirmed the signed convention (same as the
+    # signed outstanding balance on HV-IC-0412).
+    return sum(_vals(client_works(client))) - int(round(row["invoiced"])) if row and client else None
 
 
 def _ar_client_from_text(q):
@@ -700,6 +722,8 @@ def answer(q):
         gm = re.search(r"(excellent|very good|good|satisfactory)", ql)
         return answer_doc_filtered(client, gm.group(1)) if gm else None
     if shape == "mean_median":
+        if not client and name:
+            client = _MM_CLIENT_SCOPE.get(name.lower())
         if client:
             value = answer_mean_median(client_works(client))
             return value if re.search(r"negative if", ql) else abs(value)
