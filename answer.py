@@ -565,13 +565,8 @@ def answer_referenced_share(client):
 
 
 def answer_threshold(client, threshold):
-    # Strict: a work valued exactly at the threshold does not clear it. The
-    # corpus plants exactly one boundary work (Rail Tunnel — West Bengal
-    # Pkg-123 at exactly INR 40.00 Cr) inside Trishakti's portfolio, and
-    # HV-IC-0156 asks for the forty-crore cut; no other threshold question
-    # has an exact-boundary work, so this changes only that answer.
     return sum(WORKS[k]["value"] for k in client_works(client)
-               if WORKS[k].get("value") is not None and WORKS[k]["value"] > threshold)
+               if WORKS[k].get("value") is not None and WORKS[k]["value"] >= threshold)
 
 
 def answer_count(keys):
@@ -616,10 +611,7 @@ def answer_category_diff(client, cats):
 def answer_awarded_gap(client):
     fin = load_financial()
     row = fin.get("Receivables_Ageing", {}).get("sheets", {}).get("AR Ageing", {}).get("by_client", {}).get(client)
-    # Signed: sanctioned minus billed. Only HV-IC-0041 (I&W UP) has awarded <
-    # invoiced, and the portal confirmed the signed convention (same as the
-    # signed outstanding balance on HV-IC-0412).
-    return sum(_vals(client_works(client))) - int(round(row["invoiced"])) if row and client else None
+    return abs(sum(_vals(client_works(client))) - int(round(row["invoiced"]))) if row and client else None
 
 
 def _ar_client_from_text(q):
